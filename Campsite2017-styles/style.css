@@ -2773,7 +2773,8 @@ h6 + .notation {
     color: #C12B58; }
     .home-header .wp-block-cover__inner-container .wp-block-columns {
       padding: 0 2rem;
-      flex-flow: column nowrap; }
+      flex-flow: column nowrap;
+      margin-top: 0; }
       @media (min-width: 768px) {
         .home-header .wp-block-cover__inner-container .wp-block-columns {
           flex-flow: row nowrap; } }

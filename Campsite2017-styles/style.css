@@ -90,7 +90,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
-.error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link, .error404 .page-content .widget ul li a, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
+.error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link, .error404 .page-content .widget ul li a, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
 .single .post-navigation .nav-links div a:before,
 .single .post-navigation .nav-links div a:after, .single .posts-navigation .nav-links div a,
 .single .post-navigation .nav-links div a, .single .posts-navigation .nav-links div,
@@ -3471,13 +3471,83 @@ h6 + .notation {
 
 /*_______ Organises list _______*/
 .wordcamp-organizers {
-  max-width: 960px !important;
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
   margin: 2rem auto; }
+  .wordcamp-organizers.has-layout-grid {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0;
+    grid-template-columns: 100%; }
+    @media (min-width: 480px) {
+      .wordcamp-organizers.has-layout-grid {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 769px) {
+      .wordcamp-organizers.has-layout-grid {
+        grid-template-columns: repeat(3, 1fr); } }
+  .wordcamp-organizers .wordcamp-post-list__post {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: white;
+    border: 0.125rem solid #414141;
+    box-shadow: 0.5rem 0.5rem 0 #F5F1C7; }
+    .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__post {
+      position: relative;
+      display: flex;
+      flex-flow: column wrap;
+      padding: 1.5rem; }
+      @media (min-width: 769px) {
+        .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__post {
+          padding: 2rem; } }
+    .wordcamp-organizers .wordcamp-post-list__post .wordcamp-image__avatar-container {
+      top: 0;
+      left: 0;
+      order: -1;
+      max-width: 6rem;
+      margin-bottom: 1rem; }
+      .wordcamp-organizers .wordcamp-post-list__post .wordcamp-image__avatar-container img {
+        display: block; }
+    .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__title {
+      font-size: 1.5rem;
+      line-height: 100%;
+      margin-top: 0;
+      margin-bottom: .5rem; }
+    .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content {
+      display: flex;
+      flex-flow: column wrap; }
+      .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p {
+        font-size: 1rem;
+        line-height: 140%;
+        margin-bottom: 0;
+        word-break: break-word;
+        white-space: normal; }
+        .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links {
+          font-size: 0;
+          order: -1;
+          margin-bottom: 1rem; }
+          .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a {
+            position: relative;
+            display: table;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 100%;
+            text-decoration: none;
+            color: #C12B58;
+            margin-bottom: .25rem;
+            z-index: 1; }
+            .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: .5rem;
+              left: .5rem;
+              width: 100%;
+              height: .75rem;
+              background-color: #F5F1C7;
+              z-index: -1; }
+            .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:focus, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:hover {
+              color: #414141;
+              text-decoration: underline; }
+              .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:focus:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:hover:after {
+                width: 0; }
 
 /*_______ Tickets form _______*/
 .tix-clear {

@@ -3472,7 +3472,11 @@ h6 + .notation {
 
 /*_______ Organises list _______*/
 .wordcamp-organizers {
+  padding: 0;
   margin: 2rem auto; }
+  .wordcamp-organizers.has-layout-list .wordcamp-post-list__post {
+    margin-left: auto;
+    margin-right: auto; }
   .wordcamp-organizers.has-layout-grid {
     display: grid;
     grid-column-gap: 1rem;
@@ -3486,6 +3490,7 @@ h6 + .notation {
         grid-template-columns: repeat(3, 1fr); } }
   .wordcamp-organizers .wordcamp-post-list__post {
     width: 100%;
+    max-width: 400px;
     margin-bottom: 1rem;
     background-color: white;
     border: 0.125rem solid #414141;

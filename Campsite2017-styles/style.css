@@ -90,7 +90,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
-.error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link, .error404 .page-content .widget ul li a, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
+.error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link, .error404 .page-content .widget ul li a, .tix-attendee-list li .tix-attendee-twitter:after,
+.tix-attendee-list li .tix-attendee-url:after, .tix-attendee-list li .avatar, .tix-attendee-list li, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-image__avatar-container img, .wordcamp-organizers .wordcamp-post-list__post, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
 .single .post-navigation .nav-links div a:before,
 .single .post-navigation .nav-links div a:after, .single .posts-navigation .nav-links div a,
 .single .post-navigation .nav-links div a, .single .posts-navigation .nav-links div,
@@ -3481,7 +3482,7 @@ h6 + .notation {
       .wordcamp-organizers.has-layout-grid {
         grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 769px) {
-      .wordcamp-organizers.has-layout-grid {
+      .wordcamp-organizers.has-layout-grid.has-grid-columns-3 {
         grid-template-columns: repeat(3, 1fr); } }
   .wordcamp-organizers .wordcamp-post-list__post {
     width: 100%;
@@ -3489,6 +3490,14 @@ h6 + .notation {
     background-color: white;
     border: 0.125rem solid #414141;
     box-shadow: 0.5rem 0.5rem 0 #F5F1C7; }
+    .wordcamp-organizers .wordcamp-post-list__post:hover {
+      transform: scale(1.1);
+      transform-origin: center;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 0 #F5F1C7;
+      z-index: 10; }
+      .wordcamp-organizers .wordcamp-post-list__post:hover .wordcamp-image__avatar-container img {
+        filter: grayscale(0); }
     .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__post {
       position: relative;
       display: flex;
@@ -3504,7 +3513,8 @@ h6 + .notation {
       max-width: 6rem;
       margin-bottom: 1rem; }
       .wordcamp-organizers .wordcamp-post-list__post .wordcamp-image__avatar-container img {
-        display: block; }
+        display: block;
+        filter: grayscale(100); }
     .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__title {
       font-size: 1.5rem;
       line-height: 100%;
@@ -4020,20 +4030,34 @@ div[class^="wcorg-sponsor-level-"] {
   margin: 0 auto; }
 
 .tix-attendee-list {
-  padding: 0;
+  padding: 0 2rem;
   display: flex;
   flex-flow: row wrap; }
   .tix-attendee-list li {
-    min-height: 5rem;
+    min-height: 7.5rem;
     position: relative;
-    padding: .5rem .5rem .75rem 5rem;
-    margin: 0 1% 4rem;
+    padding: .5rem .5rem .75rem 7rem;
+    background-color: white;
+    border: 0.125rem solid #414141;
+    box-shadow: 0.5rem 0.5rem 0 #F5F1C7;
+    margin: 0 auto 4rem;
     overlow: hidden; }
+    @media (min-width: 400px) {
+      .tix-attendee-list li {
+        padding-left: 4rem;
+        min-height: 5.25rem; } }
+    @media (min-width: 600px) {
+      .tix-attendee-list li {
+        padding-left: 5rem; } }
     @media (min-width: 769px) {
       .tix-attendee-list li {
-        margin: 0 1% 2rem; } }
+        margin: 0 .5% 2rem; } }
     .tix-attendee-list li:hover {
-      background-color: #F5F1C7; }
+      transform: scale(1.1);
+      transform-origin: center;
+      z-index: 10; }
+      .tix-attendee-list li:hover .avatar {
+        filter: grayscale(0); }
     .tix-attendee-list li .tix-field {
       margin-left: 0 !important; }
     .tix-attendee-list li .avatar {
@@ -4041,80 +4065,119 @@ div[class^="wcorg-sponsor-level-"] {
       position: absolute;
       top: .5rem;
       left: .5rem;
-      width: 4rem !important;
-      height: 4rem !important;
+      width: 6rem !important;
+      height: 6rem !important;
       margin-right: 1rem;
-      margin-bottom: 1rem;
-      background-color: #C4C4C4; }
+      margin-bottom: .5rem;
+      background-color: #C4C4C4;
+      object-fit: cover;
+      object-position: center center;
+      filter: grayscale(100); }
+      @media (min-width: 400px) {
+        .tix-attendee-list li .avatar {
+          width: 3rem !important;
+          height: 3rem !important; } }
+      @media (min-width: 600px) {
+        .tix-attendee-list li .avatar {
+          width: 4rem !important;
+          height: 4rem !important; } }
     .tix-attendee-list li .tix-attendee-name {
-      font-size: 1.125rem !important;
+      font-family: "Montserrat", sans-serif;
       font-weight: 700;
-      line-height: 120%; }
+      font-size: 1rem !important;
+      line-height: 100%;
+      margin-bottom: .25rem; }
     .tix-attendee-list li .tix-attendee-twitter,
     .tix-attendee-list li .tix-attendee-url {
-      display: block !important;
-      font-size: .875rem !important;
-      line-height: 140%;
-      word-break: break-word; }
-      .tix-attendee-list li .tix-attendee-twitter:hover,
+      position: relative;
+      display: table;
+      font-weight: 700;
+      font-size: .75rem;
+      line-height: 100%;
+      text-decoration: none;
+      color: #C12B58;
+      margin-bottom: .25rem;
+      z-index: 1; }
+      .tix-attendee-list li .tix-attendee-twitter:after,
+      .tix-attendee-list li .tix-attendee-url:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+        width: 100%;
+        height: .5rem;
+        background-color: #F5F1C7;
+        z-index: -1; }
+      .tix-attendee-list li .tix-attendee-twitter:focus, .tix-attendee-list li .tix-attendee-twitter:hover,
+      .tix-attendee-list li .tix-attendee-url:focus,
       .tix-attendee-list li .tix-attendee-url:hover {
-        color: #C12B58; }
+        color: #414141;
+        text-decoration: underline; }
+        .tix-attendee-list li .tix-attendee-twitter:focus:after, .tix-attendee-list li .tix-attendee-twitter:hover:after,
+        .tix-attendee-list li .tix-attendee-url:focus:after,
+        .tix-attendee-list li .tix-attendee-url:hover:after {
+          width: 0; }
   .tix-attendee-list.tix-columns-2 li {
-    flex: 0 0 80%;
-    max-width: 100%;
+    flex: 1 1 100%;
+    width: 100%;
     margin: 0 auto 2rem; }
-    @media (min-width: 400px) {
+    @media (min-width: 480px) {
       .tix-attendee-list.tix-columns-2 li {
         flex: 0 0 48%;
-        max-width: 48%; } }
+        width: 48%; } }
     @media (min-width: 769px) {
       .tix-attendee-list.tix-columns-2 li {
         flex: 0 0 48%;
-        max-width: 48%; } }
+        width: 49%;
+        margin: 0 .5% 1rem; } }
   .tix-attendee-list.tix-columns-3 li {
-    flex: 0 0 80%;
-    max-width: 100%;
-    margin: 0 auto 2rem; }
-    @media (min-width: 400px) {
+    flex: 1 1 100%;
+    width: 100%;
+    margin: 0 auto 1rem; }
+    @media (min-width: 480px) {
       .tix-attendee-list.tix-columns-3 li {
-        flex: 0 0 40%;
-        max-width: 40%; } }
+        flex: 0 1 48%;
+        width: 40%; } }
     @media (min-width: 769px) {
       .tix-attendee-list.tix-columns-3 li {
-        flex: 0 0 31.333%;
-        max-width: 31.333%; } }
+        flex: 0 1 31.333%;
+        width: 32.333%;
+        margin: 0 .5% 1rem; } }
   .tix-attendee-list.tix-columns-4 li {
-    flex: 0 0 80%;
-    max-width: 100%;
-    margin: 0 auto 2rem; }
+    flex: 1 1 100%;
+    width: 100%;
+    margin: 0 auto 1rem; }
     @media (min-width: 400px) {
       .tix-attendee-list.tix-columns-4 li {
-        flex: 0 0 40%;
-        max-width: 40%; } }
-    @media (min-width: 480px) {
+        flex: 0 1 48%;
+        width: 40%; } }
+    @media (min-width: 600px) {
       .tix-attendee-list.tix-columns-4 li {
-        flex: 0 0 31.333%;
-        max-width: 31.333%; } }
+        flex: 0 1 31.333%;
+        width: 31.333%; } }
     @media (min-width: 769px) {
       .tix-attendee-list.tix-columns-4 li {
-        flex: 0 0 23%;
-        max-width: 23%; } }
+        flex: 0 0 24%;
+        width: 24%;
+        margin: 0 .5% 1rem; } }
   .tix-attendee-list.tix-columns-5 li {
-    flex: 0 0 80%;
-    max-width: 100%;
-    margin: 0 auto 2rem; }
-    @media (min-width: 400px) {
-      .tix-attendee-list.tix-columns-5 li {
-        flex: 0 0 40%;
-        max-width: 40%; } }
+    flex: 1 1 100%;
+    width: 100%;
+    margin: 0 auto 1rem; }
     @media (min-width: 480px) {
       .tix-attendee-list.tix-columns-5 li {
-        flex: 0 0 31.333%;
-        max-width: 31.333%; } }
+        flex: 0 1 48%;
+        width: 40%;
+        margin: 0 auto 1rem; } }
+    @media (min-width: 600px) {
+      .tix-attendee-list.tix-columns-5 li {
+        flex: 0 1 31.333%;
+        width: 31.333%; } }
     @media (min-width: 769px) {
       .tix-attendee-list.tix-columns-5 li {
         flex: 0 0 18%;
-        max-width: 18%; } }
+        width: 18%; } }
 /*_______ 404 page _______*/
 .error404 .page-header {
   padding: 7rem 2rem;

@@ -139,14 +139,16 @@ input[type="submit"] {
   @media (min-width: 769px) {
     .single .entry-title, .single .entry-image, #footer-widget-1 .sponsors-list {
       max-width: 840px; } }
-.error404 .page-content, .error404 .page-header .page-title, .tix-js:not(.tix-has-dynamic-receipts) form, .single .entry-footer,
+.error404 .page-content, .error404 .page-header .page-title, #tix table,
+#tix p, .tix-js:not(.tix-has-dynamic-receipts) form, .single .entry-footer,
 .page .entry-footer, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
 .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-meta, .search-no-results .content-area, .no-comments, .comments-title, .comment-respond, .comment-list {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 769px) {
-    .error404 .page-content, .error404 .page-header .page-title, .tix-js:not(.tix-has-dynamic-receipts) form, .single .entry-footer,
+    .error404 .page-content, .error404 .page-header .page-title, #tix table,
+    #tix p, .tix-js:not(.tix-has-dynamic-receipts) form, .single .entry-footer,
     .page .entry-footer, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
     .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-meta, .search-no-results .content-area, .no-comments, .comments-title, .comment-respond, .comment-list {
       max-width: 720px; } }
@@ -1799,7 +1801,7 @@ body.admin-bar {
       margin: 0 1% 1rem; }
       @media (min-width: 480px) {
         #footer-widget-1 .sponsors-list .sponsor {
-          flex: 0 1 24%; } }
+          flex: 0 1 31.333%; } }
       #footer-widget-1 .sponsors-list .sponsor a {
         display: block; }
       #footer-widget-1 .sponsors-list .sponsor:hover {
@@ -2835,8 +2837,9 @@ h6 + .notation {
 .sharedaddy {
   display: block;
   width: 100%;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  padding: 0 1rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
   margin-left: 0 !important;
   margin-right: 0 !important; }
   @media (min-width: 769px) {
@@ -3558,7 +3561,7 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
 .tix-js:not(.tix-has-dynamic-receipts) {
   max-width: 100% !important;
   background-color: #F5F1C7;
-  padding: 4rem 2rem 2rem;
+  padding: 2rem;
   margin: 4rem auto !important; }
   .tix-js:not(.tix-has-dynamic-receipts) .tix_tickets_table {
     display: flex;
@@ -3708,22 +3711,31 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
     margin-right: .5rem; }
 
 /*_______ Order Sumary _______*/
-.tix-order-summary .tix-column-quantity:before {
+.tix-order-summary .tix-column-quantity:before,
+.tix-ticket-form .tix-column-quantity:before {
   display: none !important; }
 
 @media (max-width: 480px) {
-  .tix-order-summary {
+  .tix-order-summary,
+  .tix-ticket-form {
     /* Force table to not be like tables anymore */
     /* Hide table headers (but not display: none;, for accessibility) */ }
-    .tix-order-summary thead, .tix-order-summary tbody, .tix-order-summary th, .tix-order-summary td, .tix-order-summary tr {
+    .tix-order-summary thead, .tix-order-summary tbody, .tix-order-summary th, .tix-order-summary td, .tix-order-summary tr,
+    .tix-ticket-form thead,
+    .tix-ticket-form tbody,
+    .tix-ticket-form th,
+    .tix-ticket-form td,
+    .tix-ticket-form tr {
       display: block;
       max-width: 100%;
       border: none; }
-    .tix-order-summary thead tr {
+    .tix-order-summary thead tr,
+    .tix-ticket-form thead tr {
       position: absolute;
       top: -9999px;
       left: -9999px; }
-    .tix-order-summary td {
+    .tix-order-summary td,
+    .tix-ticket-form td {
       /* Behave  like a "row" */
       position: relative;
       width: 100%;
@@ -3733,7 +3745,8 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
       padding-bottom: .5rem;
       border: none;
       margin-bottom: .5rem; }
-      .tix-order-summary td:before {
+      .tix-order-summary td:before,
+      .tix-ticket-form td:before {
         /* Now like a table header */
         position: absolute;
         /* Top/left values mimic padding */
@@ -3745,17 +3758,22 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
         text-align: right;
         padding-right: 1rem;
         white-space: nowrap; }
-      .tix-order-summary td[class^="tix-column-"] {
+      .tix-order-summary td[class^="tix-column-"],
+      .tix-ticket-form td[class^="tix-column-"] {
         font-size: 1.25rem; }
-        .tix-order-summary td[class^="tix-column-"] strong {
+        .tix-order-summary td[class^="tix-column-"] strong,
+        .tix-ticket-form td[class^="tix-column-"] strong {
           font-weight: 400; }
-    .tix-order-summary .tix-row-total td {
+    .tix-order-summary .tix-row-total td,
+    .tix-ticket-form .tix-row-total td {
       font-size: 1.5rem;
       font-weight: 700;
       border: none; }
-      .tix-order-summary .tix-row-total td:first-child {
+      .tix-order-summary .tix-row-total td:first-child,
+      .tix-ticket-form .tix-row-total td:first-child {
         display: none; }
-      .tix-order-summary .tix-row-total td:nth-of-type(2):before {
+      .tix-order-summary .tix-row-total td:nth-of-type(2):before,
+      .tix-ticket-form .tix-row-total td:nth-of-type(2):before {
         content: "Total:"; } }
 
 /*_______ Registry information _______*/
@@ -3839,6 +3857,7 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
   margin-top: 2rem; }
 
 #tix .tix-submit {
+  float: none !important;
   width: 100%; }
   #tix .tix-submit #tix-preferred-payment-option {
     display: none; }

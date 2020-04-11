@@ -1954,6 +1954,10 @@ body.admin-bar {
     #menu-social .menu-item.youtube a:before {
       content: "\f236";
       font-family: 'dashicons'; }
+    #menu-social .menu-item.linkedin a:before {
+      content: "in";
+      font-weight: 800;
+      font-size: 1.75rem; }
   #menu-social a {
     border-bottom: none; }
     #menu-social a:before {
@@ -3475,6 +3479,7 @@ h6 + .notation {
   padding: 0;
   margin: 2rem auto; }
   .wordcamp-organizers.has-layout-list .wordcamp-post-list__post {
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto; }
   .wordcamp-organizers.has-layout-grid {
@@ -3490,7 +3495,6 @@ h6 + .notation {
         grid-template-columns: repeat(3, 1fr); } }
   .wordcamp-organizers .wordcamp-post-list__post {
     width: 100%;
-    max-width: 400px;
     margin-bottom: 1rem;
     background-color: white;
     border: 0.125rem solid #414141;
@@ -4095,7 +4099,7 @@ div[class^="wcorg-sponsor-level-"] {
     .tix-attendee-list li .tix-attendee-twitter,
     .tix-attendee-list li .tix-attendee-url {
       position: relative;
-      display: table;
+      display: table !important;
       font-weight: 700;
       font-size: .75rem;
       line-height: 100%;

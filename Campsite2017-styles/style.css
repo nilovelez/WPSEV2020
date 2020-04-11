@@ -1701,7 +1701,7 @@ body.admin-bar {
   .footer-widgets-block:not(:first-child) textarea {
     height: 2.5rem;
     font-size: 1rem;
-    color: #414141;
+    color: #F5F1C7;
     background-color: transparent;
     border-color: #F5F1C7; }
     .footer-widgets-block:not(:first-child) input::placeholder,
@@ -2880,9 +2880,9 @@ h6 + .notation {
 /*_______ Bottom nav for mobile (only 2 button for the momment) _______*/
 #footer-widget-5 {
   position: fixed;
-  left: 10%;
-  right: 10%;
-  bottom: 1rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 0;
   z-index: 100; }
   @media (min-width: 480px) {

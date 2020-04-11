@@ -91,7 +91,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Variables
 --------------------------------------------------------------*/
 .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link, .error404 .page-content .widget ul li a, .tix-attendee-list li .tix-attendee-twitter:after,
-.tix-attendee-list li .tix-attendee-url:after, .tix-attendee-list li .avatar, .tix-attendee-list li, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-image__avatar-container img, .wordcamp-organizers .wordcamp-post-list__post, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
+.tix-attendee-list li .tix-attendee-url:after, .tix-attendee-list li .avatar, .tix-attendee-list li, .amigos-list .amigo, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-image__avatar-container img, .wordcamp-organizers .wordcamp-post-list__post, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
 .single .post-navigation .nav-links div a:before,
 .single .post-navigation .nav-links div a:after, .single .posts-navigation .nav-links div a,
 .single .post-navigation .nav-links div a, .single .posts-navigation .nav-links div,
@@ -105,7 +105,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .high-links .wp-block-columns .wp-block-column h4:after, .high-links .wp-block-columns .wp-block-column h5:after, .high-links .wp-block-columns .wp-block-column h6:after,
 .high-links .wp-block-columns .wp-block-column p:after, .high-links .wp-block-columns .wp-block-column h1, .high-links .wp-block-columns .wp-block-column h2, .high-links .wp-block-columns .wp-block-column h3,
 .high-links .wp-block-columns .wp-block-column h4, .high-links .wp-block-columns .wp-block-column h5, .high-links .wp-block-columns .wp-block-column h6,
-.high-links .wp-block-columns .wp-block-column p, .high-links .wp-block-columns .wp-block-column .wp-block-image, .high-links .wp-block-columns .wp-block-column, .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt a, .wp-block-buttons .wp-block-button .wp-block-button__link, #footer-widget-1 .sponsors-list .sponsor, .footer-widgets-block:not(:first-child) .widget_nav_menu .menu .menu-item a, .custom-posts-pagination .page-numbers, .posts-navigation .nav-links a,
+.high-links .wp-block-columns .wp-block-column p, .high-links .wp-block-columns .wp-block-column .wp-block-image, .high-links .wp-block-columns .wp-block-column, .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt a, .wp-block-buttons .wp-block-button .wp-block-button__link, .footer-widgets-block:not(:first-child) .widget_nav_menu .menu .menu-item a, .custom-posts-pagination .page-numbers, .posts-navigation .nav-links a,
 .post-navigation .nav-links a, .menu-toggle, .more-info:after, .more-info, .main-navigation .menu .menu-item a, .main-navigation .menu .menu-item, .main-navigation .menu, .custom-header .site-branding .custom-logo-link, button,
 input[type="button"],
 input[type="reset"],
@@ -133,12 +133,12 @@ input[type="submit"] {
     .post-navigation, .alignwide,
     .is-style-wide {
       max-width: 1200px; } }
-.single .entry-title, .single .entry-image, #footer-widget-1 .sponsors-list {
+.amigos-list, .single .entry-title, .single .entry-image {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 769px) {
-    .single .entry-title, .single .entry-image, #footer-widget-1 .sponsors-list {
+    .amigos-list, .single .entry-title, .single .entry-image {
       max-width: 840px; } }
 .error404 .page-content, .error404 .page-header .page-title, #tix table,
 #tix p, .tix-js:not(.tix-has-dynamic-receipts) form, .single .entry-footer,
@@ -1780,40 +1780,7 @@ body.admin-bar {
       margin-bottom: 2rem; }
   #footer-widget-1 .module-header {
     margin-bottom: 1rem; }
-  #footer-widget-1 .sponsors-title {
-    font-size: 1.25rem;
-    color: #666666; }
-    #footer-widget-1 .sponsors-title:before {
-      content: '';
-      display: block;
-      width: 2rem;
-      height: .125rem;
-      background-color: #666666;
-      margin: 0 auto .5rem; }
-  #footer-widget-1 .sponsors-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    margin: 0 auto 4rem; }
-    #footer-widget-1 .sponsors-list .sponsor {
-      flex: 0 1 100%;
-      margin: 0 0 1rem; }
-      @media (min-width: 480px) {
-        #footer-widget-1 .sponsors-list .sponsor {
-          flex: 0 1 33.333%; } }
-      #footer-widget-1 .sponsors-list .sponsor a {
-        display: block; }
-      #footer-widget-1 .sponsors-list .sponsor:hover {
-        opacity: .7; }
-    #footer-widget-1 .sponsors-list.colaboradores {
-      margin-bottom: 0; }
-      #footer-widget-1 .sponsors-list.colaboradores .sponsor {
-        flex: 0 1 80%; }
-        @media (min-width: 480px) {
-          #footer-widget-1 .sponsors-list.colaboradores .sponsor {
-            flex: 0 1 20%; } }
+
 #footer-widget-2 {
   margin-bottom: 2rem; }
   @media (min-width: 480px) {
@@ -1832,18 +1799,6 @@ body.admin-bar {
       #footer-widget-2 .widget:nth-of-type(4) {
         flex: 0 1 20%;
         margin-left: auto; } }
-    #footer-widget-2 .widget:nth-of-type(4) .wceu-big-btn {
-      font-size: 1.5rem;
-      font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      padding: .5em 1em;
-      background-color: #C12B58;
-      box-shadow: -0.25em 0.25em 0 #414141;
-      margin: 0 auto; }
-      @media (min-width: 480px) {
-        #footer-widget-2 .widget:nth-of-type(4) .wceu-big-btn {
-          font-size: 1.5rem; } }
     #footer-widget-2 .widget:nth-of-type(4) img {
       display: block;
       margin: 0 auto; }
@@ -3938,7 +3893,43 @@ h6 + .notation {
       color: #C12B58;
       background-color: white; }
 
-/*_______ Sponsors list _______*/
+/*_______ Amigos footer widget _______*/
+.amigos-title {
+  font-size: 1.25rem;
+  color: #666666; }
+  .amigos-title:before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: .125rem;
+    background-color: #666666;
+    margin: 0 auto .5rem; }
+
+.amigos-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto 4rem; }
+  .amigos-list .amigo {
+    flex: 0 1 100%;
+    margin: 0 0 1rem; }
+    @media (min-width: 480px) {
+      .amigos-list .amigo {
+        flex: 0 1 33.333%; } }
+    .amigos-list .amigo a {
+      display: block; }
+    .amigos-list .amigo:hover {
+      opacity: .7; }
+  .amigos-list.colaboradores {
+    margin-bottom: 0; }
+    .amigos-list.colaboradores .amigo {
+      flex: 0 1 80%; }
+      @media (min-width: 480px) {
+        .amigos-list.colaboradores .amigo {
+          flex: 0 1 25%; } }
+/*_______ Amigos list _______*/
 .home-sponsors {
   background-color: #F5F1C7;
   padding: 4rem 2rem; }

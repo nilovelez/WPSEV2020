@@ -748,6 +748,12 @@ mark, ins {
 big {
   font-size: 125%; }
 
+small {
+  font-size: 14px;
+  font-size: 0.875rem; }
+  small a {
+    text-decoration: underline; }
+
 /*_______ Lists _______*/
 ol, ul {
   font-size: 20px;
@@ -929,7 +935,7 @@ select {
   position: relative;
   font-size: 1.125rem;
   padding-right: 2rem;
-  background-image: url("https://2020.europe.wordcamp.org/files/2019/12/chevron-down.png");
+  background-image: url("https://2020.spain.wordcamp.org/files/2020/04/chevron-down.png");
   background-repeat: no-repeat;
   background-position: right .5em top 50%;
   background-size: 1rem; }
@@ -1469,8 +1475,9 @@ body.admin-bar {
       .main-navigation .sub-menu .menu-item:active {
         background-color: #414141; }
       .main-navigation .sub-menu .menu-item.current-menu-item {
-        background-color: #1a1a1a; }
+        background-color: #414141; }
         .main-navigation .sub-menu .menu-item.current-menu-item a {
+          color: #F5F1C7;
           border: none; }
   .main-navigation a {
     display: block;
@@ -2021,7 +2028,7 @@ body.admin-bar {
     color: #414141;
     padding: 1.25rem 1.25rem 4rem 1.25rem;
     background-color: #F5F1C7;
-    border: 0.25rem solid #414141; }
+    border: 0.25rem solid #C12B58; }
     .widget.widget_eu_cookie_law_widget #eu-cookie-law form {
       position: absolute;
       bottom: 15px;
@@ -2034,8 +2041,8 @@ body.admin-bar {
         font-weight: 600;
         color: #F5F1C7;
         padding: .5rem 1rem;
-        background-color: #414141;
-        border: 3px solid #414141;
+        background-color: #C12B58;
+        border: 3px solid #C12B58;
         border-radius: 0;
         margin-left: auto; }
         @media not all and (hover: none) {
@@ -3540,12 +3547,12 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
 /*_______ Tickets form _______*/
 .tix-js {
   max-width: 960px !important;
-  border-top: .25rem dashed;
+  border-top: 0.25rem dashed #C12B58;
   padding-top: 2rem;
   margin: 8rem auto; }
   .tix-js .tix_tickets_table {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: stretch;
     flex-flow: column wrap; }
     @media (min-width: 650px) {
@@ -3567,7 +3574,7 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
       align-items: flex-start;
       text-align: center;
       background-color: white;
-      border: .5rem solid;
+      border: 0.5rem solid #C12B58;
       margin: 0 auto 2rem; }
       .tix-js .tix_tickets_table tr[class^="tix-ticket-"]:focus {
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); }
@@ -3577,6 +3584,7 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
           max-width: 40%;
           margin: 0 2% 2rem; } }
   .tix-js .tix-column-description {
+    width: 100%;
     text-align: center;
     padding: 0;
     margin-bottom: 2rem; }
@@ -3587,9 +3595,10 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
     font-size: 2rem;
     font-weight: 700;
     line-height: 100%;
+    text-align: center;
     color: white;
     padding: 1rem;
-    background-color: #414141;
+    background-color: #C12B58;
     margin-bottom: 1rem; }
   .tix-js .tix-ticket-excerpt {
     display: block;
@@ -3601,6 +3610,7 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
     font-weight: 700;
     text-align: center;
     line-height: 100%;
+    color: #C12B58;
     margin: auto auto .5rem; }
   .tix-js .tix-column-quantity, .tix-js .tix-column-remaining {
     flex: 0 1 100%;
@@ -3609,19 +3619,18 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
     font-size: 1rem;
     margin-bottom: 1rem; }
     .tix-js .tix-column-remaining:before {
-      content: 'Only '; }
-    .tix-js .tix-column-remaining:after {
-      content: ' remaining'; }
+      content: 'Solo quedan '; }
   .tix-js .tix-column-quantity {
     padding: 0 2rem; }
     .tix-js .tix-column-quantity:before {
-      content: 'Choose your quantity';
+      content: 'Elige la cantidad';
       display: block;
       line-height: 100%; }
     .tix-js .tix-column-quantity select {
       font-weight: 700;
       max-width: 8rem;
-      margin: 1rem auto 2rem; }
+      margin: 1rem auto 2rem;
+      border-color: #C12B58; }
   .tix-js .tix-row-coupon {
     flex: 1 1 100%;
     display: flex;
@@ -3657,7 +3666,7 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
   #tix #tix-infos .tix-info {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #414141;
+    color: #C12B58;
     background-color: #F5F1C7;
     border: none;
     border-left: .25rem solid;
@@ -3844,14 +3853,14 @@ p + .wordcamp-organizers:not(:first-of-type) .wordcamp-image__avatar-container {
       flex: 1 1 auto; }
       #tix .tix-submit .tix-payment-method .tix-payment-tab:hover {
         color: white;
-        background-color: #414141;
+        background-color: #C12B58;
         outline: none;
         border: 0; }
       #tix .tix-submit .tix-payment-method .tix-payment-tab.tix-tab-selected {
         font-weight: 700;
         color: white;
         padding: .5rem;
-        background-color: #414141;
+        background-color: #C12B58;
         border: none; }
   #tix .tix-submit .tix-alternate-payment-option {
     float: none;
@@ -4082,19 +4091,19 @@ div[class^="wcorg-sponsor-level-"] {
         max-width: 18%; } }
 /*_______ 404 page _______*/
 .error404 .page-header {
-  padding: 7rem 2rem; }
+  padding: 7rem 2rem;
+  background-color: #C12B58; }
   .error404 .page-header .page-title {
     text-align: center;
     margin: 0;
-    color: #414141;
+    color: #F5F1C7;
     padding: 1.5rem;
-    margin: 0 auto;
-    background-color: #F5F1C7; }
+    margin: 0 auto; }
 
 .error404 .page-content > p {
   padding: 1.5rem;
   margin: -4rem auto 4rem;
-  background-color: #F5F1C7; }
+  background-color: white; }
 
 .error404 .page-content .search-form {
   max-width: 400px;
@@ -4175,3 +4184,11 @@ div[class^="wcorg-sponsor-level-"] {
         background-color: #414141; }
         .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:focus:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:hover:before {
           color: #F5F1C7; }
+  .error404 .page-content .widget.widget_recent_entries {
+    float: none;
+    width: 100%; }
+    .error404 .page-content .widget.widget_recent_entries li a {
+      font-weight: 800;
+      font-size: 1.5rem; }
+  .error404 .page-content .widget.widget_categories, .error404 .page-content .widget.widget_archive {
+    display: none; }

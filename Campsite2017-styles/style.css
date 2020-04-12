@@ -2023,10 +2023,13 @@ body.admin-bar {
 # Blocks
 --------------------------------------------------------------*/
 /*_______ Group Blocks _______*/
-.wp-block-group__inner-container h1, .wp-block-group__inner-container h2, .wp-block-group__inner-container h3,
-.wp-block-group__inner-container h4, .wp-block-group__inner-container h5, .wp-block-group__inner-container h6 {
-  margin-top: 0;
-  margin-bottom: 1.5rem; }
+.wp-block-group {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+  .wp-block-group .wp-block-group__inner-container h1, .wp-block-group .wp-block-group__inner-container h2, .wp-block-group .wp-block-group__inner-container h3,
+  .wp-block-group .wp-block-group__inner-container h4, .wp-block-group .wp-block-group__inner-container h5, .wp-block-group .wp-block-group__inner-container h6 {
+    margin-top: 0;
+    margin-bottom: 1.5rem; }
 
 /*_______ Image block _______*/
 .wp-block-image {
@@ -3431,8 +3434,11 @@ h6 + .notation {
 
 /*_______ Organises list _______*/
 .wordcamp-organizers {
-  padding: 0;
+  padding: inherit;
   margin: 2rem auto; }
+  @media (min-width: 769px) {
+    .wordcamp-organizers {
+      padding: 0; } }
   .wordcamp-organizers.has-layout-list .wordcamp-post-list__post {
     max-width: 400px;
     margin-left: auto;

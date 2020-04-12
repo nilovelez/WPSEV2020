@@ -3434,7 +3434,7 @@ h6 + .notation {
 
 /*_______ Organises list _______*/
 .wordcamp-organizers {
-  padding: inherit;
+  padding: 0 2rem;
   margin: 2rem auto; }
   @media (min-width: 769px) {
     .wordcamp-organizers {

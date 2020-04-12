@@ -3436,9 +3436,6 @@ h6 + .notation {
 .wordcamp-organizers {
   padding: 0 2rem;
   margin: 2rem auto; }
-  @media (min-width: 769px) {
-    .wordcamp-organizers {
-      padding: 0; } }
   .wordcamp-organizers.has-layout-list .wordcamp-post-list__post {
     max-width: 400px;
     margin-left: auto;

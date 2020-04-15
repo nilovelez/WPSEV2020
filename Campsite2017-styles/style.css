@@ -967,7 +967,6 @@ input[type="submit"] {
   width: auto;
   font-weight: 700;
   font-size: 1.5rem;
-  letter-spacing: 0;
   line-height: 100%;
   color: #C12B58;
   text-align: center;
@@ -1537,8 +1536,8 @@ body.admin-bar {
 /*_______ Mobile navigation _______*/
 .menu-toggle {
   position: absolute;
-  top: 1rem;
-  right: 2rem;
+  top: 1.25rem;
+  right: 4rem;
   display: block;
   width: 2.5rem;
   height: 2rem;
@@ -1551,7 +1550,7 @@ body.admin-bar {
   z-index: 20; }
   @media (min-width: 350px) {
     .menu-toggle {
-      right: 2rem; } }
+      right: 5rem; } }
   @media (min-width: 769px) {
     .menu-toggle {
       top: 2rem; } }

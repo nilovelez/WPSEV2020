@@ -1,0 +1,122 @@
+/*_______ Bottom nav for mobile (only 2 button for the momment) _______*/
+#footer-widget-5{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 0;
+	z-index: 100;
+	@media (min-width: 480px) {
+		display: none;
+	}
+	.widget {
+		margin: 0;
+		width: 100%;
+	}
+	.mobile-fixed-menu {
+		list-style-type: none;
+		display: flex;
+		justify-content: space-between;
+		margin: 0;
+		padding: 0;
+		.menu-item{
+			margin: 0;
+			width: 100%;
+			a {
+				display: inline-block;
+				width: 100%;
+				font-family: $font__main;
+				font-weight: 800;
+				font-size: 1.25rem;
+				line-height: 100%;
+				text-align: center;
+				color: $color__tertiary;
+				padding: 1rem;
+				background-color: $color__secondary;
+				border: .25rem solid $color__secondary;
+				box-shadow: 0 0 10px rgba(100,100,100, .3);
+				&:before{
+					content: "\f486";
+					display: inline-block;
+					vertical-align: middle;
+					font-family: 'dashicons';
+					font-weight: normal;
+					font-size: 1.5rem;
+					margin-right: .5rem;
+				}
+				&:focus,
+				&:hover{
+					color: $color__secondary;
+					background-color: $color__tertiary;
+				}
+			}
+		}
+	}
+}
+
+/*_______ Bottom nav for mobile (2 buttons) _______*/
+// #footer-widget-5{
+// 	width: 100vw;
+// 	position: fixed;
+// 	left: 0;
+// 	bottom: 0;
+// 	padding: 0;
+// 	background-color: $color__secondary;
+// 	z-index: 2;
+// 	@media (min-width: 480px) {
+// 		display: none;
+// 	}
+// 	.widget {
+// 		margin: 0;
+// 		width: 100%;
+// 	}
+// 	.mobile-fixed-menu {
+// 		list-style-type: none;
+// 		display: flex;
+// 		justify-content: space-between;
+// 		margin: 0;
+// 		padding: 0;
+// 		border-top: .125rem solid $color__secondary;
+// 		.menu-item{
+// 			margin: 0;
+// 			width: 50%;
+// 			a {
+// 				display: inline-block;
+// 				width: 100%;
+// 				font-weight: 700;
+// 				line-height: 100%;
+// 				text-align: center;
+// 				color: $color__secondary;
+// 				padding: .75rem 0;
+// 				background-color: $color__tertiary;
+// 				&:before{
+// 					display: inline-block;
+// 					vertical-align: middle;
+// 					font-family: 'dashicons';
+// 					font-weight: normal;
+// 					margin-right: .5rem;
+// 				}
+// 				&:focus,
+// 				&:hover{
+// 					color: $color__tertiary;
+// 					background-color: $color__primary;
+// 				}
+// 			}
+// 			&:first-child{
+// 				border-right: .125rem solid $color__secondary;
+// 				a{
+// 					&:before{
+// 						content: "\f123";
+// 					}
+// 				}
+// 			}
+// 			&:nth-of-type(2){
+// 				a{
+// 					&:before{
+// 						content: "\f486";
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

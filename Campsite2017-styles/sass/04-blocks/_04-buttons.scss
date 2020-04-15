@@ -1,0 +1,124 @@
+/*_______ Buttons Block _______*/
+.wp-block-buttons{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	.wp-block-button{
+		.wp-block-button__link{
+			font-family: $font__main;
+			font-weight: 700;
+			font-size: 1.5rem;
+			line-height: 100%;
+			color: $color__tertiary;
+			text-align: center;
+			padding: .75em 1.25em;
+			background-color: $color__secondary;
+			border: .25rem solid $color__secondary;
+			border-radius: 0;
+			@extend %transition;
+			@media(min-width: 480px){
+				font-size: 1.75rem;
+			}
+			&:focus{
+				outline: none;
+			}
+			&:focus,
+			&:hover{
+				color: $color__secondary !important;
+				background-color: transparent !important;
+			}
+		}
+		&.is-style-outline{
+			.wp-block-button__link{
+				font-weight: 700;
+				font-size: 1.5rem;
+				line-height: 100%;
+				color: $color__secondary;
+				text-align: center;
+				padding: .75em 1.25em;
+				background-color: transparent;
+				border: .25rem solid $color__secondary;
+				border-radius: 0;
+				&:focus,
+				&:hover{
+					color: $color__tertiary !important;
+					background-color: $color__secondary !important;
+				}
+			}
+		}
+		&.with-arrow{
+			.wp-block-button__link{
+				&:after{
+					content: "\f344";
+					font-family: 'dashicons';
+					display: inline-block;
+					vertical-align: middle;
+					line-height: 80%;
+					margin-left: .5rem;
+				}
+				&:hover{
+					color: $color__primary;
+					background-color: $color__secondary;
+					border-color: $color__secondary;
+				}
+			}
+		}
+		&.external-link{
+			margin-bottom: 1.25em;
+			.wp-block-button__link{
+				display: inline-block;
+				font-size: 1.125rem;
+				padding: 0;
+				background-color: transparent;
+				border: none;
+				border-bottom: .125rem solid;
+				margin: 0;
+				&:before{
+					display: inline-block;
+					vertical-align: middle;
+					content: "\f504";
+					font-family: 'dashicons';
+					font-weight: normal;
+					font-size: 1rem;
+					color: $color__secondary;
+					margin-right: .25rem;
+				}
+			}
+		}
+		&.anchor-link{
+			.wp-block-button__link{
+				color: $color__primary;
+				background-color: transparent;
+				border: .25rem solid $color__primary;
+				&:after{
+					content: ' ';
+					font-family: 'dashicons';
+					vertical-align: middle;
+				}
+				&:hover{
+					color: $color__tertiary;
+					background-color: $color__primary;
+				}
+			}
+		}
+	}
+}
+
+.more-link{
+	display: table;
+	font-size: .875rem;
+	font-weight: 700;
+	color: $color__primary;
+	margin-left: auto;
+	margin-right: 0;
+	margin-bottom: 0;
+	border-bottom: .125rem solid;
+	&:hover{
+		color: $color__secondary;
+	}
+}
+
+.edit-link {
+	display: block;
+	font-size: 1rem;
+	text-decoration: underline;
+}

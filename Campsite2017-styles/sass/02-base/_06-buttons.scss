@@ -1,0 +1,48 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	float: none;
+	position: relative;
+	display: table;
+	width: auto;
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 100%;
+	color: $color__secondary;
+	text-align: center;
+	text-transform: none;
+	text-decoration: none;
+	margin: 1rem auto;
+	padding: .75em 1.25em;
+	background-color: transparent;
+	border: .25rem solid $color__secondary;
+	border-radius: 0;
+	cursor: pointer;
+	white-space: normal;
+	@extend %transition;
+	@media (min-width: 480px){
+		font-size: 1.5rem;
+	}
+	&:visited{
+		color: inherit;
+	}
+	&:focus,
+	&:hover{
+		color: $color__tertiary;
+		background-color: $color__secondary;
+	}
+	&:active{
+		color: $color__primary;
+		background-color: $color__secondary;
+	}
+	&.invert{
+		color: $color__tertiary;
+		background-color: $color__primary;
+		&:focus,
+		&:hover{
+			color: $color__primary;
+			background-color: $color__tertiary;
+		}
+	}
+}

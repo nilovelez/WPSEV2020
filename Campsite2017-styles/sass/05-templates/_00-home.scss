@@ -1,0 +1,14 @@
+/*_______ Home page _______*/
+.home{
+	.site-content,
+	.entry-content,
+	.hentry{
+		margin-bottom: 0;
+	}
+	.entry-header{
+		display: none;
+	}
+	.home-intro{
+		flex-direction: column-reverse;
+	}
+}

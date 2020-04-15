@@ -1503,8 +1503,9 @@ body.admin-bar {
   line-height: 100%;
   text-align: center;
   text-decoration: none;
+  color: #F5F1C7;
   padding: 0;
-  background-color: #F5F1C7; }
+  background-color: #414141; }
   @media (min-width: 900px) {
     .more-info {
       font-size: 1rem;

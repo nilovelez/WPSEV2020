@@ -1527,10 +1527,11 @@ body.admin-bar {
         margin-left: .25rem;
         width: auto;
         height: auto; } }
+  .more-info:visited {
+    color: #F5F1C7; }
   .more-info:focus {
     outline: 0.125rem solid #F5F1C7; }
   .more-info:hover {
-    color: #414141 !important;
     background-color: #C12B58; }
 
 /*_______ Mobile navigation _______*/

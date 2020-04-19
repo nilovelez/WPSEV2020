@@ -4300,19 +4300,19 @@ div[class^="wcorg-sponsor-level-"] {
     .single-wcb_speaker .entry-header,
     .single-wcb_session .entry-header {
       padding: 5rem 0 0; } }
-  .single-wcb_speaker .entry-header .entry-title,
-  .single-wcb_session .entry-header .entry-title {
-    max-width: initial; }
-    .single-wcb_speaker .entry-header .entry-title:before,
-    .single-wcb_session .entry-header .entry-title:before {
-      content: '';
-      display: block;
-      width: 5rem;
-      height: 5rem;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      margin: 0 auto 1rem; }
+.single-wcb_speaker .entry-title,
+.single-wcb_session .entry-title {
+  max-width: initial; }
+  .single-wcb_speaker .entry-title:before,
+  .single-wcb_session .entry-title:before {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto 1rem; }
 
 .single-wcb_speaker .entry-content,
 .single-wcb_session .entry-content {
@@ -4362,14 +4362,14 @@ div[class^="wcorg-sponsor-level-"] {
   #session-speaker-names li {
     padding: 0;
     margin-left: 1rem; }
+    #session-speaker-names li:before {
+      display: none; }
     #session-speaker-names li a {
       font-family: "Montserrat", sans-serif; }
 
 .session-categories-links {
   margin: 0 auto;
   display: block; }
-  .session-categories-links:before {
-    display: none; }
   .session-categories-links a:before {
     content: 'Categoría: '; }
 
@@ -4475,4 +4475,4 @@ div[class^="wcorg-sponsor-level-"] {
       font-weight: 800;
       font-size: 1.5rem; }
   .error404 .page-content .widget.widget_categories, .error404 .page-content .widget.widget_archive {
-    display: none; }
+    display: none

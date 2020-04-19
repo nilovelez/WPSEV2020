@@ -90,7 +90,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
-.error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link, .error404 .page-content .widget ul li a, .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-favourite-icon .dashicons:before, .tix-attendee-list li .avatar, .amigos-list .amigo, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
+.error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link, .error404 .page-content .widget ul li a, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-favourite-icon .dashicons:before, .tix-attendee-list li .avatar, .amigos-list .amigo, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
 .single .post-navigation .nav-links div a:before,
 .single .post-navigation .nav-links div a:after, .single .posts-navigation .nav-links div a,
 .single .post-navigation .nav-links div a, .single .posts-navigation .nav-links div,
@@ -100,14 +100,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .archive .hentry .entry-header .entry-image img,
 .search-results .hentry .entry-header .entry-image img, .blog .hentry,
 .archive .hentry,
-.search-results .hentry, .session-categories-links a:after, .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:after, .tix-attendee-list li .tix-attendee-twitter:after,
-.tix-attendee-list li .tix-attendee-url:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after, .single-wcb_speaker .entry-content #speaker-session-names img,
-.single-wcb_speaker .entry-content #session-speaker-names img,
-.single-wcb_session .entry-content #speaker-session-names img,
-.single-wcb_session .entry-content #session-speaker-names img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, .tix-attendee-list li img, .wordcamp-organizers .wordcamp-post-list__post img, .single-wcb_speaker .entry-content #speaker-session-names,
-.single-wcb_speaker .entry-content #session-speaker-names,
-.single-wcb_session .entry-content #speaker-session-names,
-.single-wcb_session .entry-content #session-speaker-names, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, .tix-attendee-list li, .wordcamp-organizers .wordcamp-post-list__post, .high-links-inline .wp-block-media-text .wp-block-media-text__content p a, .high-links-inline .wp-block-media-text .wp-block-media-text__media, .high-links-inline .wp-block-media-text, .high-links .wp-block-columns .wp-block-column h1:after, .high-links .wp-block-columns .wp-block-column h2:after, .high-links .wp-block-columns .wp-block-column h3:after,
+.search-results .hentry, .session-categories-links a:after, #session-speaker-names li a:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:after, .tix-attendee-list li .tix-attendee-twitter:after,
+.tix-attendee-list li .tix-attendee-url:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after, #speaker-session-names img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, .tix-attendee-list li img, .wordcamp-organizers .wordcamp-post-list__post img, #speaker-session-names, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, .tix-attendee-list li, .wordcamp-organizers .wordcamp-post-list__post, .high-links-inline .wp-block-media-text .wp-block-media-text__content p a, .high-links-inline .wp-block-media-text .wp-block-media-text__media, .high-links-inline .wp-block-media-text, .high-links .wp-block-columns .wp-block-column h1:after, .high-links .wp-block-columns .wp-block-column h2:after, .high-links .wp-block-columns .wp-block-column h3:after,
 .high-links .wp-block-columns .wp-block-column h4:after, .high-links .wp-block-columns .wp-block-column h5:after, .high-links .wp-block-columns .wp-block-column h6:after,
 .high-links .wp-block-columns .wp-block-column p:after, .high-links .wp-block-columns .wp-block-column h1, .high-links .wp-block-columns .wp-block-column h2, .high-links .wp-block-columns .wp-block-column h3,
 .high-links .wp-block-columns .wp-block-column h4, .high-links .wp-block-columns .wp-block-column h5, .high-links .wp-block-columns .wp-block-column h6,
@@ -139,12 +133,14 @@ input[type="submit"] {
     .post-navigation, .alignwide,
     .is-style-wide {
       max-width: 1200px; } }
-.amigos-list, .single .entry-title, .single .entry-image {
+.single-wcb_speaker .entry-header,
+.single-wcb_session .entry-header, .amigos-list, .single .entry-title, .single .entry-image {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 769px) {
-    .amigos-list, .single .entry-title, .single .entry-image {
+    .single-wcb_speaker .entry-header,
+    .single-wcb_session .entry-header, .amigos-list, .single .entry-title, .single .entry-image {
       max-width: 840px; } }
 .error404 .page-content, .error404 .page-header .page-title, #tix table,
 #tix p, .tix-js:not(.tix-has-dynamic-receipts) form, .single .entry-footer,
@@ -2910,37 +2906,25 @@ h6 + .notation {
 
 /*_______ Bottom nav for mobile (2 buttons) _______*/
 /*_______ General styles for some Camptix elements _______*/
-.single-wcb_speaker .entry-content #speaker-session-names,
-.single-wcb_speaker .entry-content #session-speaker-names,
-.single-wcb_session .entry-content #speaker-session-names,
-.single-wcb_session .entry-content #session-speaker-names, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, .tix-attendee-list li, .wordcamp-organizers .wordcamp-post-list__post {
+#speaker-session-names, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, .tix-attendee-list li, .wordcamp-organizers .wordcamp-post-list__post {
   padding: 1.25rem;
   background-color: white;
   border: 0.125rem solid #414141;
   box-shadow: 0.5rem 0.5rem 0 #F5F1C7;
   margin-bottom: 1rem; }
-  .single-wcb_speaker .entry-content #speaker-session-names img,
-  .single-wcb_speaker .entry-content #session-speaker-names img,
-  .single-wcb_session .entry-content #speaker-session-names img,
-  .single-wcb_session .entry-content #session-speaker-names img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, .tix-attendee-list li img, .wordcamp-organizers .wordcamp-post-list__post img {
+  #speaker-session-names img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, .tix-attendee-list li img, .wordcamp-organizers .wordcamp-post-list__post img {
     display: block;
     filter: grayscale(100); }
-  .single-wcb_speaker .entry-content #speaker-session-names:hover,
-  .single-wcb_speaker .entry-content #session-speaker-names:hover,
-  .single-wcb_session .entry-content #speaker-session-names:hover,
-  .single-wcb_session .entry-content #session-speaker-names:hover, .wcpt-schedule tbody tr td.wcpt-session-type-session:hover, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover, .tix-attendee-list li:hover, .wordcamp-organizers .wordcamp-post-list__post:hover {
+  #speaker-session-names:hover, .wcpt-schedule tbody tr td.wcpt-session-type-session:hover, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover, .tix-attendee-list li:hover, .wordcamp-organizers .wordcamp-post-list__post:hover {
     transform: scale(1.1);
     transform-origin: center;
     background-color: #f9f9f9;
     box-shadow: 0 0 0 #F5F1C7;
     z-index: 5; }
-    .single-wcb_speaker .entry-content #speaker-session-names:hover img,
-    .single-wcb_speaker .entry-content #session-speaker-names:hover img,
-    .single-wcb_session .entry-content #speaker-session-names:hover img,
-    .single-wcb_session .entry-content #session-speaker-names:hover img, .wcpt-schedule tbody tr td.wcpt-session-type-session:hover img, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover img, .tix-attendee-list li:hover img, .wordcamp-organizers .wordcamp-post-list__post:hover img {
+    #speaker-session-names:hover img, .wcpt-schedule tbody tr td.wcpt-session-type-session:hover img, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover img, .tix-attendee-list li:hover img, .wordcamp-organizers .wordcamp-post-list__post:hover img {
       filter: grayscale(0); }
 
-.session-categories-links a, .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a, .tix-attendee-list li .tix-attendee-twitter,
+.session-categories-links a, #session-speaker-names li a, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a, .tix-attendee-list li .tix-attendee-twitter,
 .tix-attendee-list li .tix-attendee-url, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a {
   position: relative;
   display: inline-block;
@@ -2951,7 +2935,7 @@ h6 + .notation {
   color: #C12B58;
   margin-bottom: .25rem;
   z-index: 1; }
-  .session-categories-links a:after, .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:after, .tix-attendee-list li .tix-attendee-twitter:after,
+  .session-categories-links a:after, #session-speaker-names li a:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:after, .tix-attendee-list li .tix-attendee-twitter:after,
   .tix-attendee-list li .tix-attendee-url:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:after {
     content: '';
     display: block;
@@ -2962,13 +2946,13 @@ h6 + .notation {
     height: .75rem;
     background-color: #F5F1C7;
     z-index: -1; }
-  .session-categories-links a:focus, .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:focus, .tix-attendee-list li .tix-attendee-twitter:focus,
-  .tix-attendee-list li .tix-attendee-url:focus, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:focus, .session-categories-links a:hover, .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:hover, .tix-attendee-list li .tix-attendee-twitter:hover,
+  .session-categories-links a:focus, #session-speaker-names li a:focus, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:focus, .tix-attendee-list li .tix-attendee-twitter:focus,
+  .tix-attendee-list li .tix-attendee-url:focus, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:focus, .session-categories-links a:hover, #session-speaker-names li a:hover, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:hover, .tix-attendee-list li .tix-attendee-twitter:hover,
   .tix-attendee-list li .tix-attendee-url:hover, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:hover {
     color: #414141;
     text-decoration: underline; }
-    .session-categories-links a:focus:after, .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:focus:after, .tix-attendee-list li .tix-attendee-twitter:focus:after,
-    .tix-attendee-list li .tix-attendee-url:focus:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:focus:after, .session-categories-links a:hover:after, .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:hover:after, .tix-attendee-list li .tix-attendee-twitter:hover:after,
+    .session-categories-links a:focus:after, #session-speaker-names li a:focus:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:focus:after, .tix-attendee-list li .tix-attendee-twitter:focus:after,
+    .tix-attendee-list li .tix-attendee-url:focus:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:focus:after, .session-categories-links a:hover:after, #session-speaker-names li a:hover:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:hover:after, .tix-attendee-list li .tix-attendee-twitter:hover:after,
     .tix-attendee-list li .tix-attendee-url:hover:after, .wordcamp-organizers .wordcamp-post-list__post .wordcamp-organizers__content p.organizer-links a:hover:after {
       width: 0; }
 
@@ -4210,11 +4194,8 @@ div[class^="wcorg-sponsor-level-"] {
   .wcpt-schedule tbody {
     width: 100%; }
     .wcpt-schedule tbody tr {
+      border: none;
       vertical-align: top; }
-      @media (min-width: 700px) {
-        .wcpt-schedule tbody tr {
-          border: none;
-          margin-bottom: 1.5rem; } }
       .wcpt-schedule tbody tr td.wcpt-time {
         display: table-cell;
         width: auto;
@@ -4228,68 +4209,80 @@ div[class^="wcorg-sponsor-level-"] {
             width: 7%; } }
       .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom {
         position: relative;
+        width: auto;
         box-shadow: 0.25rem 0.25rem 0 #F5F1C7;
         line-height: 100%; }
+        @media (min-width: 700px) {
+          .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom {
+            width: 45%; } }
         .wcpt-schedule tbody tr td.wcpt-session-type-session:hover, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover {
-          transform: scale(1); }
-        .wcpt-schedule tbody tr td.wcpt-session-type-session a, .wcpt-schedule tbody tr td.wcpt-session-type-custom a {
+          transform: none; }
+        .wcpt-schedule tbody tr td.wcpt-session-type-session .wcpt-session-title, .wcpt-schedule tbody tr td.wcpt-session-type-custom .wcpt-session-title {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+          font-size: 1.25rem;
           text-decoration: none; }
-    .wcpt-schedule tbody .wcpt-session-title {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem; }
-    .wcpt-schedule tbody .wcpt-session-type-custom {
-      text-align: center; }
-      .wcpt-schedule tbody .wcpt-session-type-custom .wcpt-session-title {
-        justify-content: center;
-        margin-bottom: 0; }
-    .wcpt-schedule tbody .wcpt-session-type-session {
-      width: auto;
-      height: inherit;
-      vertical-align: top; }
-      @media (min-width: 700px) {
-        .wcpt-schedule tbody .wcpt-session-type-session {
-          width: 45%; }
-          .wcpt-schedule tbody .wcpt-session-type-session:before {
-            border: none; } }
-      .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-title {
-        display: block;
-        margin-bottom: 1rem;
-        padding: 0; }
-      .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers {
-        width: auto;
-        font-weight: 700;
-        font-size: 1.125rem;
-        padding: 0;
-        margin-top: auto;
-        margin-bottom: 0; }
-        .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers:before {
-          content: 'por ';
-          font-weight: 400;
-          font-size: 1rem; }
-      .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-favourite-icon {
-        position: absolute;
-        top: .5rem;
-        right: .5rem; }
-        .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-favourite-icon .dashicons {
-          color: #C4C4C4; }
-          .wcpt-schedule tbody .wcpt-session-type-session .wcb-session-favourite-icon .dashicons:before {
-            content: "\f109"; }
-      .wcpt-schedule tbody .wcpt-session-type-session.wcb-favourite-session {
+      .wcpt-schedule tbody tr td.wcpt-session-type-custom {
+        text-align: center; }
+        .wcpt-schedule tbody tr td.wcpt-session-type-custom .wcpt-session-title {
+          justify-content: center;
+          margin-bottom: 0; }
+      .wcpt-schedule tbody tr td.wcpt-session-type-session {
+        height: inherit;
+        vertical-align: top; }
+        .wcpt-schedule tbody tr td.wcpt-session-type-session:before {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+          font-size: .875rem;
+          padding: .25rem .5rem;
+          background-color: #F5F1C7;
+          border: none;
+          margin-bottom: .5rem; }
+        .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content {
+          padding-right: 1rem; }
+          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content:before {
+            display: none; }
+          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-title {
+            display: block;
+            margin-bottom: 1rem;
+            padding: 0; }
+          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers {
+            width: auto;
+            font-weight: 700;
+            font-size: 1.125rem;
+            padding: 0;
+            margin-top: auto;
+            margin-bottom: 0; }
+            .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers:before {
+              content: 'por ';
+              font-weight: 400;
+              font-size: 1rem; }
+        .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-favourite-icon {
+          position: absolute;
+          top: 1rem;
+          right: .5rem; }
+          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-favourite-icon .dashicons {
+            color: #C4C4C4; }
+            .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-favourite-icon .dashicons:before {
+              content: "\f109"; }
+      .wcpt-schedule tbody tr td.wcb-favourite-session {
         background-color: #F5F1C7;
         border-color: #C12B58; }
-        .wcpt-schedule tbody .wcpt-session-type-session.wcb-favourite-session .wcb-session-favourite-icon .dashicons {
+        .wcpt-schedule tbody tr td.wcb-favourite-session .wcb-session-favourite-icon .dashicons {
           color: #C12B58; }
-          .wcpt-schedule tbody .wcpt-session-type-session.wcb-favourite-session .wcb-session-favourite-icon .dashicons:before {
+          .wcpt-schedule tbody tr td.wcb-favourite-session .wcb-session-favourite-icon .dashicons:before {
             content: "\f537"; }
       @media (min-width: 700px) {
-        .wcpt-schedule tbody .wcpt-session-type-session.wcpt-session-empty {
+        .wcpt-schedule tbody tr td.wcpt-session-empty {
           border-left: 0.125rem solid #414141;
           border-right: 0.125rem solid #414141;
           box-shadow: 4px 0 0 #F5F1C7; } }
 @media (min-width: 700px) {
-  .wcb-speaker-jose-conti,
+  .wcb-speaker-nando-pappalardo,
+  .wcb-speaker-pablo-honey,
+  .wcb-speaker-clara-avila,
   .wcb-speaker-jose-peleato,
+  .wcb-speaker-jose-conti,
   .wcb-speaker-sergio-vazquez,
   .wcb-speaker-caribay-camacho,
   .wcb-speaker-nahuai-badiola,
@@ -4302,23 +4295,33 @@ div[class^="wcorg-sponsor-level-"] {
 .single-wcb_speaker .entry-title:before {
   background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-ponentes.png); }
 
-.single-wcb_session .entry-title:before {
-  background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-asistir.png); }
+.single-wcb_session .entry-title {
+  text-align: left; }
+  .single-wcb_session .entry-title:before {
+    background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-asistir.png); }
 
 .single-wcb_speaker .entry-header,
 .single-wcb_session .entry-header {
-  background-color: white; }
-  .single-wcb_speaker .entry-header .entry-title:before,
-  .single-wcb_session .entry-header .entry-title:before {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 5rem;
-    background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-ponentes.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin: 0 auto 1rem; }
+  background-color: white;
+  padding: 0 2rem;
+  margin: 0 auto 2rem; }
+  @media (min-width: 664px) {
+    .single-wcb_speaker .entry-header,
+    .single-wcb_session .entry-header {
+      padding: 0; } }
+  .single-wcb_speaker .entry-header .entry-title,
+  .single-wcb_session .entry-header .entry-title {
+    max-width: initial; }
+    .single-wcb_speaker .entry-header .entry-title:before,
+    .single-wcb_session .entry-header .entry-title:before {
+      content: '';
+      display: block;
+      width: 5rem;
+      height: 5rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin: 0 auto 1rem; }
 
 .single-wcb_speaker .entry-content,
 .single-wcb_session .entry-content {
@@ -4330,41 +4333,49 @@ div[class^="wcorg-sponsor-level-"] {
     .single-wcb_session .entry-content .speaker-avatar img {
       display: block;
       margin: 0 auto; }
-  .single-wcb_speaker .entry-content .speaker-sessions,
-  .single-wcb_speaker .entry-content .session-speakers,
-  .single-wcb_session .entry-content .speaker-sessions,
-  .single-wcb_session .entry-content .session-speakers {
-    text-align: center; }
-    .single-wcb_speaker .entry-content .speaker-sessions:after,
-    .single-wcb_speaker .entry-content .session-speakers:after,
-    .single-wcb_session .entry-content .speaker-sessions:after,
-    .single-wcb_session .entry-content .session-speakers:after {
-      content: ':'; }
-  .single-wcb_speaker .entry-content #speaker-session-names li:before,
-  .single-wcb_speaker .entry-content #session-speaker-names li:before,
-  .single-wcb_session .entry-content #speaker-session-names li:before,
-  .single-wcb_session .entry-content #session-speaker-names li:before {
-    display: none; }
-  .single-wcb_speaker .entry-content #speaker-session-names li a,
-  .single-wcb_speaker .entry-content #session-speaker-names li a,
-  .single-wcb_session .entry-content #speaker-session-names li a,
-  .single-wcb_session .entry-content #session-speaker-names li a {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #C12B58;
-    text-decoration: none; }
-    .single-wcb_speaker .entry-content #speaker-session-names li a:focus, .single-wcb_speaker .entry-content #speaker-session-names li a:hover,
-    .single-wcb_speaker .entry-content #session-speaker-names li a:focus,
-    .single-wcb_speaker .entry-content #session-speaker-names li a:hover,
-    .single-wcb_session .entry-content #speaker-session-names li a:focus,
-    .single-wcb_session .entry-content #speaker-session-names li a:hover,
-    .single-wcb_session .entry-content #session-speaker-names li a:focus,
-    .single-wcb_session .entry-content #session-speaker-names li a:hover {
-      text-decoration: underline;
-      color: #414141; }
+
+.speaker-sessions {
+  text-align: center; }
+  .speaker-sessions:after {
+    content: ':'; }
+
+#speaker-session-names {
+  list-style: none;
+  margin: 0 auto 2rem; }
+  #speaker-session-names:hover {
+    transform: none; }
+  #speaker-session-names li {
+    padding: 0; }
+    #speaker-session-names li:before {
+      display: none; }
+    #speaker-session-names li a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 110%;
+      color: #C12B58; }
+      #speaker-session-names li a:focus, #speaker-session-names li a:hover {
+        text-decoration: underline;
+        color: #414141; }
+
+.session-speakers {
+  display: inline-block;
+  font-size: 1.25rem; }
+
+#session-speaker-names {
+  display: inline-block;
+  list-style: none; }
+  #session-speaker-names li {
+    padding: 0;
+    margin-left: 1rem; }
+    #session-speaker-names li a {
+      font-family: "Montserrat", sans-serif; }
 
 .session-categories-links {
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: block; }
+  .session-categories-links a:before {
+    content: 'Categoría: '; }
 
 /*_______ 404 page _______*/
 .error404 .page-header {

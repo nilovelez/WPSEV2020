@@ -121,7 +121,8 @@ input[type="submit"] {
   width: 100%; }
 
 .wcorg-sponsors, .contact-form, .single .posts-navigation,
-.single .post-navigation, .blog .site-main, #footer-widget-1 .module-header, .footer-widgets-block:not(:first-child), #secondary, .custom-posts-pagination, .posts-navigation,
+.single .post-navigation, .blog .site-main,
+.tax-wcb_session_category .site-main, #footer-widget-1 .module-header, .footer-widgets-block:not(:first-child), #secondary, .custom-posts-pagination, .posts-navigation,
 .post-navigation, .alignwide,
 .is-style-wide {
   max-width: 100%;
@@ -129,7 +130,8 @@ input[type="submit"] {
   margin-right: auto; }
   @media (min-width: 769px) {
     .wcorg-sponsors, .contact-form, .single .posts-navigation,
-    .single .post-navigation, .blog .site-main, #footer-widget-1 .module-header, .footer-widgets-block:not(:first-child), #secondary, .custom-posts-pagination, .posts-navigation,
+    .single .post-navigation, .blog .site-main,
+    .tax-wcb_session_category .site-main, #footer-widget-1 .module-header, .footer-widgets-block:not(:first-child), #secondary, .custom-posts-pagination, .posts-navigation,
     .post-navigation, .alignwide,
     .is-style-wide {
       max-width: 1200px; } }
@@ -154,25 +156,27 @@ input[type="submit"] {
     .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-meta, .search-no-results .content-area, .no-comments, .comments-title, .comment-respond, .comment-list {
       max-width: 720px; } }
 .session-categories-links, .single-wcb_speaker .entry-content,
-.single-wcb_session .entry-content, .single-wcb_speaker .entry-header,
-.single-wcb_session .entry-header {
+.single-wcb_session .entry-content, .single-wcb_speaker .entry-title,
+.single-wcb_session .entry-title {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 769px) {
     .session-categories-links, .single-wcb_speaker .entry-content,
-    .single-wcb_session .entry-content, .single-wcb_speaker .entry-header,
-    .single-wcb_session .entry-header {
+    .single-wcb_session .entry-content, .single-wcb_speaker .entry-title,
+    .single-wcb_session .entry-title {
       max-width: 600px; } }
 .error404 .page-content, .wcorg-sponsors, .contact-form, .single .entry-footer,
 .page .entry-footer, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
-.page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .blog .site-main, .search-no-results .content-area, .custom-posts-pagination, .no-comments, .comments-title, .comment-respond, .comment-list {
+.page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .blog .site-main,
+.tax-wcb_session_category .site-main, .search-no-results .content-area, .custom-posts-pagination, .no-comments, .comments-title, .comment-respond, .comment-list {
   margin-left: 2rem;
   margin-right: 2rem; }
   @media (min-width: 769px) {
     .error404 .page-content, .wcorg-sponsors, .contact-form, .single .entry-footer,
     .page .entry-footer, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
-    .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .blog .site-main, .search-no-results .content-area, .custom-posts-pagination, .no-comments, .comments-title, .comment-respond, .comment-list {
+    .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .blog .site-main,
+    .tax-wcb_session_category .site-main, .search-no-results .content-area, .custom-posts-pagination, .no-comments, .comments-title, .comment-respond, .comment-list {
       margin-left: auto;
       margin-right: auto; } }
 /*--------------------------------------------------------------
@@ -2983,12 +2987,15 @@ h6 + .notation {
   flex-direction: column-reverse; }
 
 /*_______ Blog feed _______*/
-.blog .site-main {
+.blog .site-main,
+.tax-wcb_session_category .site-main {
   display: flex;
   flex-flow: row wrap;
   margin-top: 8rem; }
-  .blog .site-main > header {
-    flex: 1 1 100%; }
+  .blog .site-main > header,
+  .tax-wcb_session_category .site-main > header {
+    flex: 1 1 100%;
+    width: 100%; }
 
 .archive .hentry,
 .search-results .hentry {
@@ -3126,6 +3133,14 @@ h6 + .notation {
   .archive .hentry:hover .entry-image img,
   .search-results .hentry:hover .entry-image img {
     filter: grayscale(0); }
+
+.tax-wcb_session_category .site-main {
+  margin-top: 0; }
+
+.tax-wcb_session_category .hentry {
+  padding: 0; }
+  .tax-wcb_session_category .hentry:focus, .tax-wcb_session_category .hentry:focus-within, .tax-wcb_session_category .hentry:hover {
+    background-color: white; }
 
 /*_______ Single view of post and page _______*/
 .single .site-content {
@@ -4216,7 +4231,9 @@ div[class^="wcorg-sponsor-level-"] {
           .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom {
             width: 45%; } }
         .wcpt-schedule tbody tr td.wcpt-session-type-session:hover, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover {
-          transform: none; }
+          transform: none;
+          background-color: white;
+          box-shadow: initial; }
         .wcpt-schedule tbody tr td.wcpt-session-type-session .wcpt-session-title, .wcpt-schedule tbody tr td.wcpt-session-type-custom .wcpt-session-title {
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
@@ -4225,7 +4242,7 @@ div[class^="wcorg-sponsor-level-"] {
       @media (min-width: 700px) {
         .wcpt-schedule tbody tr td.wcb-speaker-nando-pappalardo, .wcpt-schedule tbody tr td.wcb-speaker-pablo-honey, .wcpt-schedule tbody tr td.wcb-speaker-clara-avila, .wcpt-schedule tbody tr td.wcb-speaker-jose-peleato, .wcpt-schedule tbody tr td.wcb-speaker-jose-conti, .wcpt-schedule tbody tr td.wcb-speaker-sergio-vazquez, .wcpt-schedule tbody tr td.wcb-speaker-caribay-camacho, .wcpt-schedule tbody tr td.wcb-speaker-nahuai-badiola, .wcpt-schedule tbody tr td.wcb-speaker-dario-bf, .wcpt-schedule tbody tr td.wcb-speaker-alex-cuadra {
           border-bottom: none;
-          box-shadow: 0.5rem 0 0 #F5F1C7; } }
+          box-shadow: 0.25rem 0 0 #F5F1C7; } }
       .wcpt-schedule tbody tr td.wcpt-session-type-custom {
         text-align: center; }
         .wcpt-schedule tbody tr td.wcpt-session-type-custom .wcpt-session-title {
@@ -4235,32 +4252,42 @@ div[class^="wcorg-sponsor-level-"] {
         height: inherit;
         vertical-align: top; }
         .wcpt-schedule tbody tr td.wcpt-session-type-session:before {
+          display: inline-block;
           font-family: "Montserrat", sans-serif;
           font-weight: 700;
           font-size: .875rem;
+          color: #414141;
           padding: .25rem .5rem;
           background-color: #F5F1C7;
           border: none;
           margin-bottom: .5rem; }
-        .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content {
-          padding-right: 1rem; }
-          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content:before {
-            display: none; }
-          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-title {
-            display: block;
-            margin-bottom: 1rem;
-            padding: 0; }
-          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers {
-            width: auto;
-            font-weight: 700;
-            font-size: 1.125rem;
-            padding: 0;
-            margin-top: auto;
-            margin-bottom: 0; }
-            .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers:before {
-              content: 'por ';
-              font-weight: 400;
-              font-size: 1rem; }
+        @media (min-width: 700px) {
+          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content {
+            padding-right: 2rem; } }
+        .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content:before {
+          display: none; }
+        .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-title {
+          display: block;
+          font-size: 1.5rem;
+          line-height: 110%;
+          margin-bottom: 1rem;
+          padding: 0; }
+          @media (min-width: 700px) {
+            .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-title {
+              font-size: 1.75rem; } }
+        .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers {
+          width: auto;
+          font-weight: 700;
+          font-size: 1.125rem;
+          padding: 0;
+          margin-top: auto;
+          margin-bottom: 0; }
+          .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers:before {
+            content: 'por ';
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: #414141; }
         .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-favourite-icon {
           position: absolute;
           top: 1rem;
@@ -4276,48 +4303,40 @@ div[class^="wcorg-sponsor-level-"] {
           color: #C12B58; }
           .wcpt-schedule tbody tr td.wcb-favourite-session .wcb-session-favourite-icon .dashicons:before {
             content: "\f537"; }
+        .wcpt-schedule tbody tr td.wcb-favourite-session:hover {
+          background-color: #F5F1C7; }
       @media (min-width: 700px) {
         .wcpt-schedule tbody tr td.wcpt-session-empty {
           border-left: 0.125rem solid #414141;
           border-right: 0.125rem solid #414141;
           box-shadow: 4px 0 0 #F5F1C7; } }
 /*_______ Speaker & Session singles _______*/
-.single-wcb_speaker .entry-header,
-.single-wcb_session .entry-header {
-  background-color: white;
-  padding: 5rem 2rem 0;
-  margin: 0 auto 2rem; }
-  @media (min-width: 664px) {
-    .single-wcb_speaker .entry-header,
-    .single-wcb_session .entry-header {
-      padding: 5rem 0 0; } }
-.single-wcb_speaker .entry-title,
-.single-wcb_session .entry-title {
-  max-width: initial; }
-  .single-wcb_speaker .entry-title:before,
-  .single-wcb_session .entry-title:before {
-    content: '';
-    display: block;
-    width: 5rem;
-    height: 5rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin: 0 auto 1rem; }
+.single-wcb_speaker .entry-title:before,
+.single-wcb_session .entry-title:before {
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0 auto 1rem;
+  filter: contrast(0.5); }
 
 .single-wcb_speaker .entry-content,
 .single-wcb_session .entry-content {
   margin: 0 auto; }
-  .single-wcb_speaker .entry-content .speaker-avatar,
-  .single-wcb_session .entry-content .speaker-avatar {
-    margin-bottom: 2rem; }
-    .single-wcb_speaker .entry-content .speaker-avatar img,
-    .single-wcb_session .entry-content .speaker-avatar img {
-      display: block;
-      margin: 0 auto; }
+
+.single-wcb_speaker .entry-header {
+  padding: 5rem 2rem 3rem;
+  margin-bottom: -3rem; }
 
 .single-wcb_speaker .entry-title:before {
   background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-ponentes.png); }
+
+.single-wcb_session .entry-header {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem; }
 
 .single-wcb_session .entry-title {
   text-align: left; }
@@ -4326,6 +4345,12 @@ div[class^="wcorg-sponsor-level-"] {
     margin: 0 0 1rem; }
 
 /*_______ Speaker single _______*/
+.speaker-avatar {
+  margin-bottom: 2rem; }
+  .speaker-avatar img {
+    display: block;
+    margin: 0 auto; }
+
 .speaker-sessions {
   text-align: center; }
   .speaker-sessions:after {
@@ -4354,26 +4379,33 @@ div[class^="wcorg-sponsor-level-"] {
 /*_______ Session single _______*/
 .session-speakers {
   display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   font-size: 1.25rem;
-  margin-right: 0; }
+  margin-right: .5rem !important; }
+  .session-speakers:after {
+    content: ':'; }
 
 #session-speaker-names {
   display: inline-block;
   list-style: none;
-  margin-left: 0; }
+  margin-left: 0 !important; }
   #session-speaker-names li {
-    padding: 0;
-    margin-left: 1rem; }
+    padding: 0; }
     #session-speaker-names li:before {
       display: none; }
     #session-speaker-names li a {
-      font-family: "Montserrat", sans-serif; }
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.25rem; }
 
 .session-categories-links {
   margin: 0 auto;
   display: block; }
-  .session-categories-links a:before {
-    content: 'Categoría: '; }
+  .session-categories-links:before {
+    content: 'Categoría: ';
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1rem; }
 
 /*_______ 404 page _______*/
 .error404 .page-header {
@@ -4476,4 +4508,5 @@ div[class^="wcorg-sponsor-level-"] {
     .error404 .page-content .widget.widget_recent_entries li a {
       font-weight: 800;
       font-size: 1.5rem; }
-  .error404 .page-content .widget.widget_categorie
+  .error404 .page-content .widget.widget_categories, .error404 .page-content .widget.widget_archive {
+    display: none; }

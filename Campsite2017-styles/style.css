@@ -4210,7 +4210,9 @@ div[class^="wcorg-sponsor-level-"] {
 /*_______ Schedule page _______*/
 .wcpt-schedule {
   border-spacing: .625rem;
-  border-collapse: separate; }
+  border-collapse: separate;
+  margin-left: auto !important;
+  margin-right: auto !important; }
   .wcpt-schedule thead {
     background-color: #F5F1C7;
     border: none; }
@@ -4225,6 +4227,10 @@ div[class^="wcorg-sponsor-level-"] {
         background-color: white; }
   .wcpt-schedule tbody tr {
     vertical-align: top; }
+    @media (max-width: 700px) {
+      .wcpt-schedule tbody tr {
+        border: none;
+        margin-bottom: 1.5rem; } }
     .wcpt-schedule tbody tr td.wcpt-time {
       display: table-cell;
       font-weight: 700;

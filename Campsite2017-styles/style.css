@@ -4281,16 +4281,7 @@ div[class^="wcorg-sponsor-level-"] {
           border-left: 0.125rem solid #414141;
           border-right: 0.125rem solid #414141;
           box-shadow: 4px 0 0 #F5F1C7; } }
-/*_______ Speakers & Seasons singles _______*/
-.single-wcb_speaker .entry-title:before {
-  background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-ponentes.png); }
-
-.single-wcb_session .entry-title {
-  text-align: left; }
-  .single-wcb_session .entry-title:before {
-    background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-asistir.png);
-    margin: 0 0 1rem; }
-
+/*_______ Speaker & Session singles _______*/
 .single-wcb_speaker .entry-header,
 .single-wcb_session .entry-header {
   background-color: white;
@@ -4325,6 +4316,16 @@ div[class^="wcorg-sponsor-level-"] {
       display: block;
       margin: 0 auto; }
 
+.single-wcb_speaker .entry-title:before {
+  background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-ponentes.png); }
+
+.single-wcb_session .entry-title {
+  text-align: left; }
+  .single-wcb_session .entry-title:before {
+    background-image: url(https://2020.spain.wordcamp.org/files/2020/04/icono-asistir.png);
+    margin: 0 0 1rem; }
+
+/*_______ Speaker single _______*/
 .speaker-sessions {
   text-align: center; }
   .speaker-sessions:after {
@@ -4350,6 +4351,7 @@ div[class^="wcorg-sponsor-level-"] {
         text-decoration: underline;
         color: #414141; }
 
+/*_______ Session single _______*/
 .session-speakers {
   display: inline-block;
   font-size: 1.25rem;
@@ -4474,5 +4476,4 @@ div[class^="wcorg-sponsor-level-"] {
     .error404 .page-content .widget.widget_recent_entries li a {
       font-weight: 800;
       font-size: 1.5rem; }
-  .error404 .page-content .widget.widget_categories, .error404 .page-content .widget.widget_archive {
-    display: none
+  .error404 .page-content .widget.widget_categorie

@@ -3137,6 +3137,10 @@ h6 + .notation {
 .tax-wcb_session_category .site-main {
   margin-top: 0; }
 
+.tax-wcb_session_category .page-header {
+  background-color: white;
+  padding: 4rem 2rem; }
+
 .tax-wcb_session_category .hentry {
   padding: 0; }
   .tax-wcb_session_category .hentry:focus, .tax-wcb_session_category .hentry:focus-within, .tax-wcb_session_category .hentry:hover {
@@ -4311,6 +4315,10 @@ div[class^="wcorg-sponsor-level-"] {
           border-right: 0.125rem solid #414141;
           box-shadow: 4px 0 0 #F5F1C7; } }
 /*_______ Speaker & Session singles _______*/
+.single-wcb_speaker .entry-header,
+.single-wcb_session .entry-header {
+  display: block; }
+
 .single-wcb_speaker .entry-title:before,
 .single-wcb_session .entry-title:before {
   content: '';
@@ -4505,8 +4513,4 @@ div[class^="wcorg-sponsor-level-"] {
   .error404 .page-content .widget.widget_recent_entries {
     float: none;
     width: 100%; }
-    .error404 .page-content .widget.widget_recent_entries li a {
-      font-weight: 800;
-      font-size: 1.5rem; }
-  .error404 .page-content .widget.widget_categories, .error404 .page-content .widget.widget_archive {
-    display: none; }
+    .error404 .page-content .widget.widget_recent_entr

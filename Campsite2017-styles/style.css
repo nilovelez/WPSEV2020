@@ -3365,10 +3365,7 @@ h6 + .notation {
         .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
         .single .post-navigation .nav-links div a:before,
         .single .post-navigation .nav-links div a:after {
-          position: absolute;
-          top: 25%;
-          bottom: 25%;
-          padding: .25rem; }
+          position: absolute; }
           @media (min-width: 800px) {
             .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
             .single .post-navigation .nav-links div a:before,
@@ -3409,7 +3406,7 @@ h6 + .notation {
           content: " ";
           font-family: 'dashicons';
           font-weight: 800;
-          left: -2.25rem; }
+          left: -1.75rem; }
           @media (min-width: 800px) {
             .single .posts-navigation .nav-links div.nav-previous a:before,
             .single .post-navigation .nav-links div.nav-previous a:before {
@@ -3440,7 +3437,7 @@ h6 + .notation {
           .single .post-navigation .nav-links div.nav-next a:after {
             content: " ";
             font-family: 'dashicons';
-            right: -2.25rem; }
+            right: -1.75rem; }
             @media (min-width: 800px) {
               .single .posts-navigation .nav-links div.nav-next a:after,
               .single .post-navigation .nav-links div.nav-next a:after {
@@ -4362,14 +4359,18 @@ div[class^="wcorg-sponsor-level-"] {
     display: block;
     margin: 0 auto; }
 
-.speaker-sessions {
-  text-align: center; }
-  .speaker-sessions:after {
-    content: ':'; }
+.speaker-sessions:after {
+  content: ':'; }
 
 #speaker-session-names {
   list-style: none;
-  margin: 0 2rem 2rem; }
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem; }
+  @media (min-width: 800px) {
+    #speaker-session-names {
+      margin-left: auto;
+      margin-right: auto; } }
   #speaker-session-names:hover {
     transform: none; }
   #speaker-session-names li {
@@ -4511,5 +4512,4 @@ div[class^="wcorg-sponsor-level-"] {
       .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:focus, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:hover {
         color: #C12B58;
         background-color: #414141; }
-        .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:focus:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:hover:before {
-      
+        .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:focus:before, .error404 .page-content .widget.widget_tag_clou

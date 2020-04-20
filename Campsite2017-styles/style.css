@@ -3134,17 +3134,20 @@ h6 + .notation {
   .search-results .hentry:hover .entry-image img {
     filter: grayscale(0); }
 
-.tax-wcb_session_category .site-main {
+.archive.tax-wcb_session_category .site-main {
   margin-top: 0; }
 
-.tax-wcb_session_category .page-header {
+.archive.tax-wcb_session_category .page-header {
   background-color: white;
   padding: 4rem 2rem; }
 
-.tax-wcb_session_category .hentry {
-  padding: 0; }
-  .tax-wcb_session_category .hentry:focus, .tax-wcb_session_category .hentry:focus-within, .tax-wcb_session_category .hentry:hover {
+.archive.tax-wcb_session_category .hentry {
+  padding: 0;
+  border-left: 0.25rem solid #F5F1C7; }
+  .archive.tax-wcb_session_category .hentry:focus, .archive.tax-wcb_session_category .hentry:focus-within, .archive.tax-wcb_session_category .hentry:hover {
     background-color: white; }
+  .archive.tax-wcb_session_category .hentry .entry-title {
+    font-size: 1.5rem; }
 
 /*_______ Single view of post and page _______*/
 .single .site-content {
@@ -4509,8 +4512,4 @@ div[class^="wcorg-sponsor-level-"] {
         color: #C12B58;
         background-color: #414141; }
         .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:focus:before, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:hover:before {
-          color: #F5F1C7; }
-  .error404 .page-content .widget.widget_recent_entries {
-    float: none;
-    width: 100%; }
-    .error404 .page-content .widget.widget_recent_entr
+      

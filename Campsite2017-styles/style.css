@@ -1080,22 +1080,9 @@ input[type="submit"] {
   padding: 0; }
 
 /* Make sure embeds and iframes fit their containers. */
-.is-type-video {
-  position: relative;
-  padding-bottom: 56.25%;
-  margin: 0 auto 3rem;
-  height: 0;
-  overflow: hidden; }
-  .is-type-video figcaption {
-    position: absolute;
-    bottom: 0; }
-
 embed,
 iframe,
 object {
-  position: absolute;
-  top: 0;
-  left: 0;
   max-width: 100%;
   width: 100%;
   height: 100%; }

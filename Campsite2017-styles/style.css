@@ -4044,22 +4044,37 @@ h6 + .notation {
   justify-content: center;
   margin: 0 auto 4rem; }
   .amigos-list .amigo {
-    flex: 0 1 100%;
     margin: 0 0 1rem; }
-    @media (min-width: 480px) {
-      .amigos-list .amigo {
-        flex: 0 1 33.333%; } }
     .amigos-list .amigo a {
       display: block; }
     .amigos-list .amigo:hover {
       opacity: .7; }
-  .amigos-list.colaboradores {
+  .amigos-list.patrocinadores {
+    flex: 0 1 100%; }
+    @media (min-width: 480px) {
+      .amigos-list.patrocinadores {
+        flex: 0 1 50%; } }
+    @media (min-width: 768px) {
+      .amigos-list.patrocinadores {
+        flex: 0 1 33.333%; } }
+  .amigos-list.colaboradores .amigo {
+    flex: 0 1 80%; }
+    @media (min-width: 480px) {
+      .amigos-list.colaboradores .amigo {
+        flex: 0 1 50%; } }
+    @media (min-width: 768px) {
+      .amigos-list.colaboradores .amigo {
+        flex: 0 1 25%; } }
+  .amigos-list.mediapartners {
     margin-bottom: 0; }
-    .amigos-list.colaboradores .amigo {
-      flex: 0 1 80%; }
+    .amigos-list.mediapartners .amigo {
+      flex: 0 1 60%; }
       @media (min-width: 480px) {
-        .amigos-list.colaboradores .amigo {
-          flex: 0 1 25%; } }
+        .amigos-list.mediapartners .amigo {
+          flex: 0 1 50%; } }
+      @media (min-width: 768px) {
+        .amigos-list.mediapartners .amigo {
+          flex: 0 1 20%; } }
 /*_______ Amigos list _______*/
 .home-sponsors {
   background-color: #F5F1C7;

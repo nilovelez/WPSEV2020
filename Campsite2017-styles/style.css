@@ -4074,7 +4074,7 @@ h6 + .notation {
           flex: 0 1 50%; } }
       @media (min-width: 768px) {
         .amigos-list.mediapartners .amigo {
-          flex: 0 1 25%; } }
+          flex: 0 1 18%; } }
 /*_______ Amigos list _______*/
 .home-sponsors {
   background-color: #F5F1C7;

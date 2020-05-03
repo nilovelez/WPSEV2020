@@ -4049,29 +4049,31 @@ h6 + .notation {
     opacity: .7; }
   .amigos-list.patrocinadores .amigo {
     flex: 0 1 100%;
-    margin: 0 0 1rem; }
+    margin: 0 auto 1rem; }
     @media (min-width: 480px) {
       .amigos-list.patrocinadores .amigo {
         flex: 0 1 48%;
         margin: 0 1% 1rem; } }
     @media (min-width: 769px) {
       .amigos-list.patrocinadores .amigo {
-        flex: 0 1 33.333%; } }
+        flex: 0 1 33.333%;
+        margin: 0 0 1rem; } }
   .amigos-list.colaboradores .amigo {
     flex: 0 1 80%;
-    margin: 0 0 1rem; }
+    margin: 0 auto 1rem; }
     @media (min-width: 480px) {
       .amigos-list.colaboradores .amigo {
         flex: 0 1 35%;
         margin: 0 5% 1rem; } }
     @media (min-width: 769px) {
       .amigos-list.colaboradores .amigo {
-        flex: 0 1 25%; } }
+        flex: 0 1 25%;
+        margin: 0 0 1rem; } }
   .amigos-list.mediapartners {
     margin-bottom: 0; }
     .amigos-list.mediapartners .amigo {
       flex: 0 1 60%;
-      margin: 0 0 1rem; }
+      margin: 0 auto 1rem; }
       @media (min-width: 480px) {
         .amigos-list.mediapartners .amigo {
           flex: 0 1 30%;
@@ -4629,5 +4631,3 @@ div[class^="wcorg-sponsor-level-"] {
     .error404 .page-content .widget.widget_recent_entries li a {
       font-weight: 800;
       font-size: 1.5rem; }
-  .error404 .page-content .widget.widget_categories, .error404 .page-content .widget.widget_archive {
-    display: none; }

@@ -4626,3 +4626,8 @@ div[class^="wcorg-sponsor-level-"] {
   .error404 .page-content .widget.widget_recent_entries {
     float: none;
     width: 100%; }
+    .error404 .page-content .widget.widget_recent_entries li a {
+      font-weight: 800;
+      font-size: 1.5rem; }
+  .error404 .page-content .widget.widget_categories, .error404 .page-content .widget.widget_archive {
+    display: none; }

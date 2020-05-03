@@ -4043,14 +4043,13 @@ h6 + .notation {
   flex-flow: row wrap;
   justify-content: center;
   margin: 0 auto 4rem; }
-  .amigos-list .amigo {
-    margin: 0 0 1rem; }
-    .amigos-list .amigo a {
-      display: block; }
-    .amigos-list .amigo:hover {
-      opacity: .7; }
+  .amigos-list .amigo a {
+    display: block; }
+  .amigos-list .amigo:hover {
+    opacity: .7; }
   .amigos-list.patrocinadores .amigo {
-    flex: 0 1 100%; }
+    flex: 0 1 100%;
+    margin: 0 0 1rem; }
     @media (min-width: 480px) {
       .amigos-list.patrocinadores .amigo {
         flex: 0 1 48%;
@@ -4059,7 +4058,8 @@ h6 + .notation {
       .amigos-list.patrocinadores .amigo {
         flex: 0 1 33.333%; } }
   .amigos-list.colaboradores .amigo {
-    flex: 0 1 80%; }
+    flex: 0 1 80%;
+    margin: 0 0 1rem; }
     @media (min-width: 480px) {
       .amigos-list.colaboradores .amigo {
         flex: 0 1 35%;

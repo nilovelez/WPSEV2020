@@ -101,7 +101,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .search-results .hentry .entry-header .entry-image img, .blog .hentry,
 .archive .hentry,
 .search-results .hentry, .session-categories-links a:after, #session-speaker-names li a:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:after, .tix-attendee-list li .tix-attendee-twitter:after,
-.tix-attendee-list li .tix-attendee-url:after, .wordcamp-sessions .wordcamp-sessions__speakers a:after, .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a:after, #speaker-session-names img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, .tix-attendee-list li img, .wordcamp-post-list .wordcamp-post-list__post img, #speaker-session-names, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, .tix-attendee-list li, .wordcamp-post-list .wordcamp-post-list__post, .high-links-inline .wp-block-media-text .wp-block-media-text__content p a, .high-links-inline .wp-block-media-text .wp-block-media-text__media, .high-links-inline .wp-block-media-text, .high-links .wp-block-columns .wp-block-column h1:after, .high-links .wp-block-columns .wp-block-column h2:after, .high-links .wp-block-columns .wp-block-column h3:after,
+.tix-attendee-list li .tix-attendee-url:after, .wordcamp-sessions .wordcamp-sessions__speakers a:after, .personal-links a:after,
+.organizer-links a:after, #speaker-session-names img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, .tix-attendee-list li img, .wordcamp-post-list .wordcamp-post-list__post img, #speaker-session-names, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, .tix-attendee-list li, .wordcamp-post-list .wordcamp-post-list__post, .high-links-inline .wp-block-media-text .wp-block-media-text__content p a, .high-links-inline .wp-block-media-text .wp-block-media-text__media, .high-links-inline .wp-block-media-text, .high-links .wp-block-columns .wp-block-column h1:after, .high-links .wp-block-columns .wp-block-column h2:after, .high-links .wp-block-columns .wp-block-column h3:after,
 .high-links .wp-block-columns .wp-block-column h4:after, .high-links .wp-block-columns .wp-block-column h5:after, .high-links .wp-block-columns .wp-block-column h6:after,
 .high-links .wp-block-columns .wp-block-column p:after, .high-links .wp-block-columns .wp-block-column h1, .high-links .wp-block-columns .wp-block-column h2, .high-links .wp-block-columns .wp-block-column h3,
 .high-links .wp-block-columns .wp-block-column h4, .high-links .wp-block-columns .wp-block-column h5, .high-links .wp-block-columns .wp-block-column h6,
@@ -2923,7 +2924,8 @@ h6 + .notation {
       filter: grayscale(0); }
 
 .session-categories-links a, #session-speaker-names li a, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a, .tix-attendee-list li .tix-attendee-twitter,
-.tix-attendee-list li .tix-attendee-url, .wordcamp-sessions .wordcamp-sessions__speakers a, .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a {
+.tix-attendee-list li .tix-attendee-url, .wordcamp-sessions .wordcamp-sessions__speakers a, .personal-links a,
+.organizer-links a {
   position: relative;
   display: inline-block;
   font-weight: 700;
@@ -2934,7 +2936,8 @@ h6 + .notation {
   margin-bottom: .25rem;
   z-index: 1; }
   .session-categories-links a:after, #session-speaker-names li a:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:after, .tix-attendee-list li .tix-attendee-twitter:after,
-  .tix-attendee-list li .tix-attendee-url:after, .wordcamp-sessions .wordcamp-sessions__speakers a:after, .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a:after {
+  .tix-attendee-list li .tix-attendee-url:after, .wordcamp-sessions .wordcamp-sessions__speakers a:after, .personal-links a:after,
+  .organizer-links a:after {
     content: '';
     display: block;
     position: absolute;
@@ -2945,13 +2948,17 @@ h6 + .notation {
     background-color: #F5F1C7;
     z-index: -1; }
   .session-categories-links a:focus, #session-speaker-names li a:focus, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:focus, .tix-attendee-list li .tix-attendee-twitter:focus,
-  .tix-attendee-list li .tix-attendee-url:focus, .wordcamp-sessions .wordcamp-sessions__speakers a:focus, .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a:focus, .session-categories-links a:hover, #session-speaker-names li a:hover, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:hover, .tix-attendee-list li .tix-attendee-twitter:hover,
-  .tix-attendee-list li .tix-attendee-url:hover, .wordcamp-sessions .wordcamp-sessions__speakers a:hover, .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a:hover {
+  .tix-attendee-list li .tix-attendee-url:focus, .wordcamp-sessions .wordcamp-sessions__speakers a:focus, .personal-links a:focus,
+  .organizer-links a:focus, .session-categories-links a:hover, #session-speaker-names li a:hover, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:hover, .tix-attendee-list li .tix-attendee-twitter:hover,
+  .tix-attendee-list li .tix-attendee-url:hover, .wordcamp-sessions .wordcamp-sessions__speakers a:hover, .personal-links a:hover,
+  .organizer-links a:hover {
     color: #414141;
     text-decoration: underline; }
     .session-categories-links a:focus:after, #session-speaker-names li a:focus:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:focus:after, .tix-attendee-list li .tix-attendee-twitter:focus:after,
-    .tix-attendee-list li .tix-attendee-url:focus:after, .wordcamp-sessions .wordcamp-sessions__speakers a:focus:after, .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a:focus:after, .session-categories-links a:hover:after, #session-speaker-names li a:hover:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:hover:after, .tix-attendee-list li .tix-attendee-twitter:hover:after,
-    .tix-attendee-list li .tix-attendee-url:hover:after, .wordcamp-sessions .wordcamp-sessions__speakers a:hover:after, .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a:hover:after {
+    .tix-attendee-list li .tix-attendee-url:focus:after, .wordcamp-sessions .wordcamp-sessions__speakers a:focus:after, .personal-links a:focus:after,
+    .organizer-links a:focus:after, .session-categories-links a:hover:after, #session-speaker-names li a:hover:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:hover:after, .tix-attendee-list li .tix-attendee-twitter:hover:after,
+    .tix-attendee-list li .tix-attendee-url:hover:after, .wordcamp-sessions .wordcamp-sessions__speakers a:hover:after, .personal-links a:hover:after,
+    .organizer-links a:hover:after {
       width: 0; }
 
 /*--------------------------------------------------------------
@@ -3555,12 +3562,16 @@ h6 + .notation {
         margin-bottom: 0;
         word-break: break-word;
         white-space: normal; }
-        .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links {
-          margin-bottom: 1rem; }
-          .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links br {
-            display: none; }
-          .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a {
-            display: table; }
+
+.personal-links,
+.organizer-links {
+  margin-bottom: 1rem; }
+  .personal-links br,
+  .organizer-links br {
+    display: none; }
+  .personal-links a,
+  .organizer-links a {
+    display: table; }
 
 /*_______ WordCamp Speakers _______*/
 .wordcamp-speakers .wordcamp-post-list__post {
@@ -4631,3 +4642,5 @@ div[class^="wcorg-sponsor-level-"] {
     .error404 .page-content .widget.widget_recent_entries li a {
       font-weight: 800;
       font-size: 1.5rem; }
+  .error404 .page-content .widget.widget_categories, .error404 .page-content .widget.widget_archive {
+    display: none; }

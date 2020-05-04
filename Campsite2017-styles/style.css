@@ -724,8 +724,6 @@ p {
   p a {
     text-decoration: underline;
     word-break: break-word; }
-    p a:visited {
-      color: #414141; }
   p.has-small-font-size {
     font-size: 16px;
     font-size: 1rem; }
@@ -1084,9 +1082,6 @@ input[type="submit"] {
 embed,
 iframe,
 object {
-  position: absolute;
-  top: 0;
-  left: 0;
   max-width: 100%;
   width: 100%;
   height: 100%; }

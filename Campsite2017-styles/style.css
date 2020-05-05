@@ -3681,8 +3681,9 @@ h6 + .notation {
   height: 0; }
 
 .tix-notice {
-  padding-left: .5rem;
-  background: lightYellow;
+  padding: .5rem .5rem .5rem .75rem;
+  background: #f9f7e5;
+  border-radius: 0;
   border: none;
   border-left: 0.25rem solid #C12B58;
   margin: 0 auto; }

@@ -1,8 +1,8 @@
 /*!
 Theme Name: WCES online 2020 (based on CampSite 2017 theme)
 Theme URI: http://underscores.me/
-Author: Bernhard Kau, Roberto Tuñón
-Author URI: https://kau-boys.com, https://robertotunon.com
+Author: Bernhard Kau, Roberto Tuñón, Nuria Ramoneda, Juanka Díaz
+Author URI: https://kau-boys.com, https://robertotunon.com, https://jdevelopia.com/
 Description: New styles for the CampSite 2017 theme, a WordCamp Base Theme. For a quicker start, check out the <a href="https://2017.europe.wordcamp.org/2017/05/09/using-style-guides-for-modular-wordcamp-designs/">style guide</a>.
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -110,7 +110,23 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 .post-navigation .nav-links a, .menu-toggle, .more-info:after, .more-info, .main-navigation .menu .menu-item a, .main-navigation .menu .menu-item, .main-navigation .menu, .custom-header .site-branding .custom-logo-link, button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"], .custom-header .site-branding .custom-logo-link, .main-navigation .menu, .main-navigation .menu .menu-item, .main-navigation .menu .menu-item a, .more-info, .more-info:after, .menu-toggle, .posts-navigation .nav-links a,
+.post-navigation .nav-links a, .custom-posts-pagination .page-numbers, .footer-widgets-block:not(:first-child) .widget_nav_menu .menu .menu-item a, .wp-block-buttons .wp-block-button .wp-block-button__link, .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt a, .high-links .wp-block-columns .wp-block-column, .high-links .wp-block-columns .wp-block-column .wp-block-image, .high-links .wp-block-columns .wp-block-column h1, .high-links .wp-block-columns .wp-block-column h2, .high-links .wp-block-columns .wp-block-column h3,
+.high-links .wp-block-columns .wp-block-column h4, .high-links .wp-block-columns .wp-block-column h5, .high-links .wp-block-columns .wp-block-column h6,
+.high-links .wp-block-columns .wp-block-column p, .high-links .wp-block-columns .wp-block-column h1:after, .high-links .wp-block-columns .wp-block-column h2:after, .high-links .wp-block-columns .wp-block-column h3:after,
+.high-links .wp-block-columns .wp-block-column h4:after, .high-links .wp-block-columns .wp-block-column h5:after, .high-links .wp-block-columns .wp-block-column h6:after,
+.high-links .wp-block-columns .wp-block-column p:after, .high-links-inline .wp-block-media-text, .high-links-inline .wp-block-media-text .wp-block-media-text__media, .high-links-inline .wp-block-media-text .wp-block-media-text__content p a, .wordcamp-post-list .wordcamp-post-list__post, .tix-attendee-list li, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, #speaker-session-names, .wordcamp-post-list .wordcamp-post-list__post img, .tix-attendee-list li img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, #speaker-session-names img, .wordcamp-post-list .wordcamp-post-list__post .wordcamp-block__item-content p.organizer-links a:after, .wordcamp-sessions .wordcamp-sessions__speakers a:after, .tix-attendee-list li .tix-attendee-twitter:after,
+.tix-attendee-list li .tix-attendee-url:after, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a:after, #session-speaker-names li a:after, .session-categories-links a:after, .blog .hentry,
+.archive .hentry,
+.search-results .hentry, .blog .hentry .entry-header .entry-image img,
+.archive .hentry .entry-header .entry-image img,
+.search-results .hentry .entry-header .entry-image img, .blog .hentry .more-link,
+.archive .hentry .more-link,
+.search-results .hentry .more-link, .single .posts-navigation .nav-links div,
+.single .post-navigation .nav-links div, .single .posts-navigation .nav-links div a,
+.single .post-navigation .nav-links div a, .single .posts-navigation .nav-links div a:before, .single .posts-navigation .nav-links div a:after,
+.single .post-navigation .nav-links div a:before,
+.single .post-navigation .nav-links div a:after, .wordcamp-speakers__sessions .wordcamp-speakers__sessions-list-item:before, .wordcamp-speakers__session-info, .wordcamp-sessions .wordcamp-sessions__time-location, .amigos-list .amigo, .tix-attendee-list li .avatar, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-favourite-icon .dashicons:before, .error404 .page-content .widget ul li a, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link, .error404 .page-content .widget.widget_tag_cloud .tag-cloud-link:before {
   transition: all .25s ease-in-out; }
 
 /*_______ Color variables ________*/
@@ -121,65 +137,70 @@ input[type="submit"] {
   max-width: 100%;
   width: 100%; }
 
-.wcorg-sponsors, .contact-form, .single .posts-navigation,
-.single .post-navigation, .blog .site-main,
-.tax-wcb_session_category .site-main, #footer-widget-1 .module-header, .footer-widgets-block:not(:first-child), #secondary, .custom-posts-pagination, .posts-navigation,
-.post-navigation, .alignwide,
-.is-style-wide {
+.alignwide,
+.is-style-wide, .posts-navigation,
+.post-navigation, .custom-posts-pagination, #secondary, .footer-widgets-block:not(:first-child), #footer-widget-1 .module-header, .blog .site-main,
+.tax-wcb_session_category .site-main, .single .posts-navigation,
+.single .post-navigation, .contact-form, .wcorg-sponsors {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 769px) {
-    .wcorg-sponsors, .contact-form, .single .posts-navigation,
-    .single .post-navigation, .blog .site-main,
-    .tax-wcb_session_category .site-main, #footer-widget-1 .module-header, .footer-widgets-block:not(:first-child), #secondary, .custom-posts-pagination, .posts-navigation,
-    .post-navigation, .alignwide,
-    .is-style-wide {
+    .alignwide,
+    .is-style-wide, .posts-navigation,
+    .post-navigation, .custom-posts-pagination, #secondary, .footer-widgets-block:not(:first-child), #footer-widget-1 .module-header, .blog .site-main,
+    .tax-wcb_session_category .site-main, .single .posts-navigation,
+    .single .post-navigation, .contact-form, .wcorg-sponsors {
       max-width: 1200px; } }
-.amigos-list, .single .entry-title, .single .entry-image {
+
+.single .entry-image, .single .entry-title, .amigos-list {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 769px) {
-    .amigos-list, .single .entry-title, .single .entry-image {
+    .single .entry-image, .single .entry-title, .amigos-list {
       max-width: 840px; } }
-.error404 .page-content, .error404 .page-header .page-title, #tix table,
-#tix p, .tix-js:not(.tix-has-dynamic-receipts) form, .single .entry-footer,
-.page .entry-footer, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
-.page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-meta, .search-no-results .content-area, .no-comments, .comments-title, .comment-respond, .comment-list {
+
+.comments-title, .comment-respond, .comment-list, .no-comments, .search-no-results .content-area, .single .entry-meta, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
+.page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-footer,
+.page .entry-footer, .tix-js:not(.tix-has-dynamic-receipts) form, #tix table,
+#tix p, .error404 .page-header .page-title, .error404 .page-content {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 769px) {
-    .error404 .page-content, .error404 .page-header .page-title, #tix table,
-    #tix p, .tix-js:not(.tix-has-dynamic-receipts) form, .single .entry-footer,
-    .page .entry-footer, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
-    .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-meta, .search-no-results .content-area, .no-comments, .comments-title, .comment-respond, .comment-list {
+    .comments-title, .comment-respond, .comment-list, .no-comments, .search-no-results .content-area, .single .entry-meta, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
+    .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-footer,
+    .page .entry-footer, .tix-js:not(.tix-has-dynamic-receipts) form, #tix table,
+    #tix p, .error404 .page-header .page-title, .error404 .page-content {
       max-width: 720px; } }
-.session-categories-links, .single-wcb_speaker .entry-content,
-.single-wcb_session .entry-content, .single-wcb_speaker .entry-title,
-.single-wcb_session .entry-title {
+
+.single-wcb_speaker .entry-title,
+.single-wcb_session .entry-title, .single-wcb_speaker .entry-content,
+.single-wcb_session .entry-content, .session-categories-links {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 769px) {
-    .session-categories-links, .single-wcb_speaker .entry-content,
-    .single-wcb_session .entry-content, .single-wcb_speaker .entry-title,
-    .single-wcb_session .entry-title {
+    .single-wcb_speaker .entry-title,
+    .single-wcb_session .entry-title, .single-wcb_speaker .entry-content,
+    .single-wcb_session .entry-content, .session-categories-links {
       max-width: 600px; } }
-.error404 .page-content, .wcorg-sponsors, .contact-form, .single .entry-footer,
-.page .entry-footer, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
-.page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .blog .site-main,
-.tax-wcb_session_category .site-main, .search-no-results .content-area, .custom-posts-pagination, .no-comments, .comments-title, .comment-respond, .comment-list {
+
+.comments-title, .comment-respond, .comment-list, .no-comments, .custom-posts-pagination, .search-no-results .content-area, .blog .site-main,
+.tax-wcb_session_category .site-main, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
+.page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-footer,
+.page .entry-footer, .contact-form, .wcorg-sponsors, .error404 .page-content {
   margin-left: 2rem;
   margin-right: 2rem; }
   @media (min-width: 769px) {
-    .error404 .page-content, .wcorg-sponsors, .contact-form, .single .entry-footer,
-    .page .entry-footer, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
-    .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .blog .site-main,
-    .tax-wcb_session_category .site-main, .search-no-results .content-area, .custom-posts-pagination, .no-comments, .comments-title, .comment-respond, .comment-list {
+    .comments-title, .comment-respond, .comment-list, .no-comments, .custom-posts-pagination, .search-no-results .content-area, .blog .site-main,
+    .tax-wcb_session_category .site-main, .single .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide),
+    .page .entry-content > *:not(.alignleft):not(.alignright):not(.alignwide):not(.alignfull):not(.is-style-wide), .single .entry-footer,
+    .page .entry-footer, .contact-form, .wcorg-sponsors, .error404 .page-content {
       margin-left: auto;
       margin-right: auto; } }
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
@@ -578,6 +599,7 @@ figure {
     .alignleft {
       float: left;
       margin-right: 1.5rem; } }
+
 .alignright {
   display: block;
   float: none;
@@ -587,6 +609,7 @@ figure {
     .alignright {
       float: right;
       margin-left: 1.5rem; } }
+
 .aligncenter {
   display: block;
   margin-left: auto;
@@ -603,6 +626,7 @@ figure {
     .alignwide,
     .is-style-wide {
       padding: 0; } }
+
 .alignfull {
   clear: both; }
 
@@ -657,6 +681,7 @@ h1 {
     h1 {
       font-size: 44px;
       font-size: 2.75rem; } }
+
 h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 28px;
@@ -668,6 +693,7 @@ h2 {
     h2 {
       font-size: 36px;
       font-size: 2.25rem; } }
+
 h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
@@ -679,6 +705,7 @@ h3 {
     h3 {
       font-size: 32px;
       font-size: 2rem; } }
+
 h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
@@ -690,6 +717,7 @@ h4 {
     h4 {
       font-size: 28px;
       font-size: 1.75rem; } }
+
 h5 {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
@@ -701,6 +729,7 @@ h5 {
     h5 {
       font-size: 24px;
       font-size: 1.5rem; } }
+
 h6 {
   font-size: 18px;
   font-size: 1.125rem;
@@ -711,6 +740,7 @@ h6 {
     h6 {
       font-size: 22px;
       font-size: 1.375rem; } }
+
 /*_______ Typography elements _______*/
 p {
   font-size: 20px;
@@ -781,6 +811,7 @@ ol, ul {
     ol, ul {
       font-size: 24px;
       font-size: 1.5rem; } }
+
 ul {
   list-style: disc; }
   ul li {
@@ -853,6 +884,7 @@ label {
   @media (min-width: 480px) {
     label {
       font-size: 1.25rem; } }
+
 input,
 select,
 textarea {
@@ -1045,21 +1077,29 @@ input[type="submit"] {
   text-align: center;
   vertical-align: top;
   width: 100%; }
-  .gallery-columns-2 .gallery-item, .gallery-columns-2 .blocks-gallery-item {
+  .gallery-columns-2 .gallery-item, .gallery-columns-2
+  .blocks-gallery-item {
     max-width: 50%; }
-  .gallery-columns-3 .gallery-item, .gallery-columns-3 .blocks-gallery-item {
+  .gallery-columns-3 .gallery-item, .gallery-columns-3
+  .blocks-gallery-item {
     max-width: 33.33%; }
-  .gallery-columns-4 .gallery-item, .gallery-columns-4 .blocks-gallery-item {
+  .gallery-columns-4 .gallery-item, .gallery-columns-4
+  .blocks-gallery-item {
     max-width: 25%; }
-  .gallery-columns-5 .gallery-item, .gallery-columns-5 .blocks-gallery-item {
+  .gallery-columns-5 .gallery-item, .gallery-columns-5
+  .blocks-gallery-item {
     max-width: 20%; }
-  .gallery-columns-6 .gallery-item, .gallery-columns-6 .blocks-gallery-item {
+  .gallery-columns-6 .gallery-item, .gallery-columns-6
+  .blocks-gallery-item {
     max-width: 16.66%; }
-  .gallery-columns-7 .gallery-item, .gallery-columns-7 .blocks-gallery-item {
+  .gallery-columns-7 .gallery-item, .gallery-columns-7
+  .blocks-gallery-item {
     max-width: 14.28%; }
-  .gallery-columns-8 .gallery-item, .gallery-columns-8 .blocks-gallery-item {
+  .gallery-columns-8 .gallery-item, .gallery-columns-8
+  .blocks-gallery-item {
     max-width: 12.5%; }
-  .gallery-columns-9 .gallery-item, .gallery-columns-9 .blocks-gallery-item {
+  .gallery-columns-9 .gallery-item, .gallery-columns-9
+  .blocks-gallery-item {
     max-width: 11.11%; }
 
 .gallery-caption {
@@ -1238,6 +1278,7 @@ body.admin-bar {
   @media screen and (max-width: 600px) {
     body.admin-bar #wpadminbar {
       position: fixed; } }
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -1251,6 +1292,7 @@ body.admin-bar {
   @media (min-width: 769px) {
     .site {
       margin-top: 4.75rem; } }
+
 .site-content {
   margin-bottom: 9rem; }
 
@@ -1279,6 +1321,7 @@ body.admin-bar {
   @media (min-width: 1920px) {
     .site-header {
       padding: 0 14%; } }
+
 .custom-header {
   display: flex;
   justify-content: center;
@@ -1304,6 +1347,7 @@ body.admin-bar {
     @media (min-width: 769px) {
       .custom-header .site-branding .custom-logo {
         width: 150px; } }
+
 /*_______ Main navigation _______*/
 .main-navigation {
   display: block;
@@ -1970,6 +2014,7 @@ body.admin-bar {
         display: inline-block;
         vertical-align: middle;
         margin: 0 1rem; } }
+
 .site-info-network {
   display: inline-block;
   vertical-align: middle;
@@ -2027,6 +2072,7 @@ body.admin-bar {
       .widget.widget_eu_cookie_law_widget #eu-cookie-law form {
         bottom: 5px;
         right: 5px; } }
+
 /*--------------------------------------------------------------
 # Blocks
 --------------------------------------------------------------*/
@@ -2102,6 +2148,7 @@ body.admin-bar {
         .entry-content ol li:before {
           left: -2rem;
           text-indent: -.25rem; } }
+
 /*_______ Buttons Block _______*/
 .wp-block-buttons {
   margin-top: 2rem;
@@ -2349,6 +2396,7 @@ table {
     @media (min-width: 480px) {
       .wp-block-media-text.is-stacked-on-mobile {
         display: grid; } }
+
 /*_______ Blockquotes Blocks _______*/
 .wp-block-quote {
   position: relative;
@@ -2415,6 +2463,7 @@ table {
       @media (min-width: 480px) {
         .wp-block-quote.is-style-large:after {
           font-size: 4.875rem; } }
+
 .wp-block-pullquote {
   padding: 2rem;
   border-top: 0.25rem solid #414141;
@@ -2608,8 +2657,7 @@ table {
           font-size: 1.5rem;
           line-height: 80%;
           color: #F5F1C7; }
-        .high-links .wp-block-columns .wp-block-column h1 a, .high-links .wp-block-columns .wp-block-column h2 a, .high-links .wp-block-columns .wp-block-column h3 a,
-        .high-links .wp-block-columns .wp-block-column h4 a, .high-links .wp-block-columns .wp-block-column h5 a, .high-links .wp-block-columns .wp-block-column h6 a,
+        .high-links .wp-block-columns .wp-block-column h1 a, .high-links .wp-block-columns .wp-block-column h2 a, .high-links .wp-block-columns .wp-block-column h3 a, .high-links .wp-block-columns .wp-block-column h4 a, .high-links .wp-block-columns .wp-block-column h5 a, .high-links .wp-block-columns .wp-block-column h6 a,
         .high-links .wp-block-columns .wp-block-column p a {
           display: block;
           font-size: 1.5rem;
@@ -2619,8 +2667,7 @@ table {
           margin-top: auto;
           margin-bottom: 0; }
           @media (min-width: 480px) {
-            .high-links .wp-block-columns .wp-block-column h1 a, .high-links .wp-block-columns .wp-block-column h2 a, .high-links .wp-block-columns .wp-block-column h3 a,
-            .high-links .wp-block-columns .wp-block-column h4 a, .high-links .wp-block-columns .wp-block-column h5 a, .high-links .wp-block-columns .wp-block-column h6 a,
+            .high-links .wp-block-columns .wp-block-column h1 a, .high-links .wp-block-columns .wp-block-column h2 a, .high-links .wp-block-columns .wp-block-column h3 a, .high-links .wp-block-columns .wp-block-column h4 a, .high-links .wp-block-columns .wp-block-column h5 a, .high-links .wp-block-columns .wp-block-column h6 a,
             .high-links .wp-block-columns .wp-block-column p a {
               font-size: 1.5rem; } }
       .high-links .wp-block-columns .wp-block-column:focus, .high-links .wp-block-columns .wp-block-column:focus-within, .high-links .wp-block-columns .wp-block-column:hover {
@@ -2633,12 +2680,9 @@ table {
         .high-links .wp-block-columns .wp-block-column:hover h4:after, .high-links .wp-block-columns .wp-block-column:hover h5:after, .high-links .wp-block-columns .wp-block-column:hover h6:after,
         .high-links .wp-block-columns .wp-block-column:hover p:after {
           color: #414141; }
-        .high-links .wp-block-columns .wp-block-column:focus h1 a, .high-links .wp-block-columns .wp-block-column:focus h2 a, .high-links .wp-block-columns .wp-block-column:focus h3 a,
-        .high-links .wp-block-columns .wp-block-column:focus h4 a, .high-links .wp-block-columns .wp-block-column:focus h5 a, .high-links .wp-block-columns .wp-block-column:focus h6 a,
-        .high-links .wp-block-columns .wp-block-column:focus p a, .high-links .wp-block-columns .wp-block-column:focus-within h1 a, .high-links .wp-block-columns .wp-block-column:focus-within h2 a, .high-links .wp-block-columns .wp-block-column:focus-within h3 a,
-        .high-links .wp-block-columns .wp-block-column:focus-within h4 a, .high-links .wp-block-columns .wp-block-column:focus-within h5 a, .high-links .wp-block-columns .wp-block-column:focus-within h6 a,
-        .high-links .wp-block-columns .wp-block-column:focus-within p a, .high-links .wp-block-columns .wp-block-column:hover h1 a, .high-links .wp-block-columns .wp-block-column:hover h2 a, .high-links .wp-block-columns .wp-block-column:hover h3 a,
-        .high-links .wp-block-columns .wp-block-column:hover h4 a, .high-links .wp-block-columns .wp-block-column:hover h5 a, .high-links .wp-block-columns .wp-block-column:hover h6 a,
+        .high-links .wp-block-columns .wp-block-column:focus h1 a, .high-links .wp-block-columns .wp-block-column:focus h2 a, .high-links .wp-block-columns .wp-block-column:focus h3 a, .high-links .wp-block-columns .wp-block-column:focus h4 a, .high-links .wp-block-columns .wp-block-column:focus h5 a, .high-links .wp-block-columns .wp-block-column:focus h6 a,
+        .high-links .wp-block-columns .wp-block-column:focus p a, .high-links .wp-block-columns .wp-block-column:focus-within h1 a, .high-links .wp-block-columns .wp-block-column:focus-within h2 a, .high-links .wp-block-columns .wp-block-column:focus-within h3 a, .high-links .wp-block-columns .wp-block-column:focus-within h4 a, .high-links .wp-block-columns .wp-block-column:focus-within h5 a, .high-links .wp-block-columns .wp-block-column:focus-within h6 a,
+        .high-links .wp-block-columns .wp-block-column:focus-within p a, .high-links .wp-block-columns .wp-block-column:hover h1 a, .high-links .wp-block-columns .wp-block-column:hover h2 a, .high-links .wp-block-columns .wp-block-column:hover h3 a, .high-links .wp-block-columns .wp-block-column:hover h4 a, .high-links .wp-block-columns .wp-block-column:hover h5 a, .high-links .wp-block-columns .wp-block-column:hover h6 a,
         .high-links .wp-block-columns .wp-block-column:hover p a {
           outline: none;
           color: #414141; }
@@ -2908,22 +2952,22 @@ h6 + .notation {
         content: "\f486"; }
 
 /*_______ General styles for some Camptix elements _______*/
-#speaker-session-names, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, .tix-attendee-list li, .wordcamp-post-list .wordcamp-post-list__post {
+.wordcamp-post-list .wordcamp-post-list__post, .tix-attendee-list li, .wcpt-schedule tbody tr td.wcpt-session-type-session, .wcpt-schedule tbody tr td.wcpt-session-type-custom, #speaker-session-names {
   padding: 1.25rem;
   background-color: white;
   border: 0.125rem solid #414141;
   box-shadow: 0.5rem 0.5rem 0 #F5F1C7;
   margin-bottom: 1rem; }
-  #speaker-session-names img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, .tix-attendee-list li img, .wordcamp-post-list .wordcamp-post-list__post img {
+  .wordcamp-post-list .wordcamp-post-list__post img, .tix-attendee-list li img, .wcpt-schedule tbody tr td.wcpt-session-type-session img, .wcpt-schedule tbody tr td.wcpt-session-type-custom img, #speaker-session-names img {
     display: block;
     filter: grayscale(100); }
-  #speaker-session-names:hover, .wcpt-schedule tbody tr td.wcpt-session-type-session:hover, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover, .tix-attendee-list li:hover, .wordcamp-post-list .wordcamp-post-list__post:hover {
+  .wordcamp-post-list .wordcamp-post-list__post:hover, .tix-attendee-list li:hover, .wcpt-schedule tbody tr td.wcpt-session-type-session:hover, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover, #speaker-session-names:hover {
     transform: scale(1.1);
     transform-origin: center;
     background-color: #f9f9f9;
     box-shadow: 0 0 0 #F5F1C7;
     z-index: 5; }
-    #speaker-session-names:hover img, .wcpt-schedule tbody tr td.wcpt-session-type-session:hover img, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover img, .tix-attendee-list li:hover img, .wordcamp-post-list .wordcamp-post-list__post:hover img {
+    .wordcamp-post-list .wordcamp-post-list__post:hover img, .tix-attendee-list li:hover img, .wcpt-schedule tbody tr td.wcpt-session-type-session:hover img, .wcpt-schedule tbody tr td.wcpt-session-type-custom:hover img, #speaker-session-names:hover img {
       filter: grayscale(0); }
 
 .session-categories-links a, #session-speaker-names li a, .wcpt-schedule tbody tr td.wcpt-session-type-session .wcb-session-cell-content .wcpt-session-speakers a, .tix-attendee-list li .tix-attendee-twitter,
@@ -3177,6 +3221,7 @@ h6 + .notation {
       .single .entry-image img {
         width: 100%;
         height: auto; } }
+
 .single .entry-title {
   color: #414141;
   text-align: center;
@@ -3226,18 +3271,13 @@ h6 + .notation {
   .page .entry-content *:not([id^="more-"]) + h5,
   .page .entry-content *:not([id^="more-"]) + h6 {
     margin-top: 1em; }
-  .single .entry-content h1 + h1, .single .entry-content h2 + h1, .single .entry-content h3 + h1,
-  .single .entry-content h4 + h1, .single .entry-content h5 + h1, .single .entry-content h6 + h1, .single .entry-content h1 + h2, .single .entry-content h2 + h2, .single .entry-content h3 + h2,
-  .single .entry-content h4 + h2, .single .entry-content h5 + h2, .single .entry-content h6 + h2, .single .entry-content h1 + h3, .single .entry-content h2 + h3, .single .entry-content h3 + h3,
-  .single .entry-content h4 + h3, .single .entry-content h5 + h3, .single .entry-content h6 + h3,
+  .single .entry-content h1 + h1, .single .entry-content h2 + h1, .single .entry-content h3 + h1, .single .entry-content h4 + h1, .single .entry-content h5 + h1, .single .entry-content h6 + h1, .single .entry-content h1 + h2, .single .entry-content h2 + h2, .single .entry-content h3 + h2, .single .entry-content h4 + h2, .single .entry-content h5 + h2, .single .entry-content h6 + h2, .single .entry-content h1 + h3, .single .entry-content h2 + h3, .single .entry-content h3 + h3, .single .entry-content h4 + h3, .single .entry-content h5 + h3, .single .entry-content h6 + h3,
   .single .entry-content h1 + h4,
   .single .entry-content h2 + h4,
   .single .entry-content h3 + h4,
   .single .entry-content h4 + h4,
   .single .entry-content h5 + h4,
-  .single .entry-content h6 + h4, .single .entry-content h1 + h5, .single .entry-content h2 + h5, .single .entry-content h3 + h5,
-  .single .entry-content h4 + h5, .single .entry-content h5 + h5, .single .entry-content h6 + h5, .single .entry-content h1 + h6, .single .entry-content h2 + h6, .single .entry-content h3 + h6,
-  .single .entry-content h4 + h6, .single .entry-content h5 + h6, .single .entry-content h6 + h6,
+  .single .entry-content h6 + h4, .single .entry-content h1 + h5, .single .entry-content h2 + h5, .single .entry-content h3 + h5, .single .entry-content h4 + h5, .single .entry-content h5 + h5, .single .entry-content h6 + h5, .single .entry-content h1 + h6, .single .entry-content h2 + h6, .single .entry-content h3 + h6, .single .entry-content h4 + h6, .single .entry-content h5 + h6, .single .entry-content h6 + h6,
   .page .entry-content h1 + h1,
   .page .entry-content h2 + h1,
   .page .entry-content h3 + h1,
@@ -3452,6 +3492,7 @@ h6 + .notation {
             .single .post-navigation .nav-links div.nav-next a:focus:after,
             .single .post-navigation .nav-links div.nav-next a:hover:after {
               right: 0; } }
+
 /*_______ Page template _______*/
 .page-template-default .entry-header,
 .page-template .entry-header,
@@ -3500,6 +3541,7 @@ h6 + .notation {
     .grunion-field-wrap.mid-left-wrap {
       float: left;
       width: 48%; } }
+
 .grunion-field-wrap.mid-right-wrap {
   float: none;
   width: 100%; }
@@ -3507,6 +3549,7 @@ h6 + .notation {
     .grunion-field-wrap.mid-right-wrap {
       float: right;
       width: 48%; } }
+
 .grunion-field-wrap .grunion-field-label span {
   display: none; }
 
@@ -3900,6 +3943,7 @@ h6 + .notation {
   @media (min-width: 480px) {
     .tix-attendee-form tr, .tix_invoice_table tr {
       flex-flow: row nowrap; } }
+
 .tix-attendee-form td.tix-left, .tix_invoice_table td.tix-left {
   width: 100%;
   text-align: left;
@@ -3915,6 +3959,7 @@ h6 + .notation {
     @media (min-width: 480px) {
       .tix-attendee-form td.tix-left label, .tix_invoice_table td.tix-left label {
         text-align: right; } }
+
 .tix-attendee-form td.tix-right, .tix_invoice_table td.tix-right {
   width: 100%; }
   @media (min-width: 480px) {
@@ -4107,18 +4152,27 @@ h6 + .notation {
   @media (min-width: 768px) {
     .wceu-sponsors-title {
       font-size: 3rem; } }
+
 div[class^="wcorg-sponsor-level-"] {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem; }
-  div[class^="wcorg-sponsor-level-"] h2, div[class^="wcorg-sponsor-level-"] h3, div[class^="wcorg-sponsor-level-"] h4, div[class^="wcorg-sponsor-level-"] h5, div[class^="wcorg-sponsor-level-"] h6 {
+  div[class^="wcorg-sponsor-level-"] h2,
+  div[class^="wcorg-sponsor-level-"] h3,
+  div[class^="wcorg-sponsor-level-"] h4,
+  div[class^="wcorg-sponsor-level-"] h5,
+  div[class^="wcorg-sponsor-level-"] h6 {
     flex: 1 1 100%;
     font-size: 1.75rem;
     text-align: center;
     margin-bottom: 1.5rem; }
-    div[class^="wcorg-sponsor-level-"] h2:before, div[class^="wcorg-sponsor-level-"] h3:before, div[class^="wcorg-sponsor-level-"] h4:before, div[class^="wcorg-sponsor-level-"] h5:before, div[class^="wcorg-sponsor-level-"] h6:before {
+    div[class^="wcorg-sponsor-level-"] h2:before,
+    div[class^="wcorg-sponsor-level-"] h3:before,
+    div[class^="wcorg-sponsor-level-"] h4:before,
+    div[class^="wcorg-sponsor-level-"] h5:before,
+    div[class^="wcorg-sponsor-level-"] h6:before {
       content: '.....';
       display: block;
       font-size: 2.5rem;
@@ -4314,6 +4368,7 @@ div[class^="wcorg-sponsor-level-"] {
       .tix-attendee-list.tix-columns-5 li {
         flex: 0 0 18%;
         width: 18%; } }
+
 /*_______ Schedule page _______*/
 .wcpt-schedule {
   border-collapse: separate;
@@ -4439,6 +4494,7 @@ div[class^="wcorg-sponsor-level-"] {
           border-left: 0.125rem solid #414141;
           border-right: 0.125rem solid #414141;
           box-shadow: 4px 0 0 #F5F1C7; } }
+
 /*_______ Speaker & Session singles _______*/
 .single-wcb_speaker .entry-header,
 .single-wcb_session .entry-header {
@@ -4583,6 +4639,7 @@ div[class^="wcorg-sponsor-level-"] {
         height: auto;
         font-size: 1.5rem;
         padding: .625rem 1rem; } }
+
 .error404 .page-content .widget {
   display: block;
   margin-bottom: 4rem; }

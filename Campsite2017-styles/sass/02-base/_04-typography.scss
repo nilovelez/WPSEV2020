@@ -91,9 +91,6 @@ p {
 	a{
 		text-decoration: underline;
 		word-break: break-word;
-		&:visited {
-			color: $color__primary;
-		}
 	}
 	&.has-small-font-size{
 		@include font-size(1);

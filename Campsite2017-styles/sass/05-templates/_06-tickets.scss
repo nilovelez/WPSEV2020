@@ -3,6 +3,17 @@
 	display: none;
 	height: 0;
 }
+
+.tix-notice {
+	@extend %inner-supertiny;
+	padding: .5rem .5rem .5rem .75rem;
+    background: $color__minimus;
+	border-radius: 0;
+	border: none;
+	border-left: .25rem solid $color__secondary;
+	margin: 0 auto;
+}
+
 .tix-js:not(.tix-has-dynamic-receipts){
 	max-width: 100% !important;
 	background-color: $color__tertiary;

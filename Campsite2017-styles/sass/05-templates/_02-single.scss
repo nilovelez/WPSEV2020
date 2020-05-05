@@ -185,9 +185,6 @@
 					&:before,
 					&:after{
 						position: absolute;
-						top: 25%;
-						bottom: 25%;
-						padding: .25rem;
 						@extend %transition;
 						@media (min-width: 800px){
 							top: 50%;
@@ -225,7 +222,7 @@
 							content: " ";
 							font-family: 'dashicons';
 							font-weight: 800;
-							left: -2.25rem;
+							left: -1.75rem;
 							@media (min-width: 800px){
 								left: 20%;
 								right: 20%;
@@ -257,7 +254,7 @@
 						&:after{
 							content: " ";
 							font-family: 'dashicons';
-							right: -2.25rem;
+							right: -1.75rem;
 							@media (min-width: 800px){
 								left: 20%;
 								right: 20%;

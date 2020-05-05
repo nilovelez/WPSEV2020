@@ -1555,8 +1555,8 @@ body.admin-bar {
 /*_______ Mobile navigation _______*/
 .menu-toggle {
   position: absolute;
-  top: 1.25rem;
-  right: 4rem;
+  top: -1rem;
+  right: 1rem;
   display: block;
   width: 2.5rem;
   height: 2rem;

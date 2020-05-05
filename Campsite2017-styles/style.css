@@ -2886,7 +2886,8 @@ h6 + .notation {
     padding: 0; }
     #footer-widget-5 .mobile-fixed-menu .menu-item {
       margin: 0;
-      width: 100%; }
+      width: 100%;
+      border-right: 1px solid #F5F1C7; }
       #footer-widget-5 .mobile-fixed-menu .menu-item a {
         display: inline-block;
         width: 100%;
@@ -2898,7 +2899,7 @@ h6 + .notation {
         color: #F5F1C7;
         padding: .5rem 1rem;
         background-color: #C12B58;
-        border: 0.25rem solid #C12B58;
+        border-left: 0.25rem solid #C12B58;
         box-shadow: 0 0 10px rgba(100, 100, 100, 0.3); }
         #footer-widget-5 .mobile-fixed-menu .menu-item a:before {
           display: block;
@@ -2909,8 +2910,8 @@ h6 + .notation {
         #footer-widget-5 .mobile-fixed-menu .menu-item a:focus, #footer-widget-5 .mobile-fixed-menu .menu-item a:hover {
           color: #C12B58;
           background-color: #F5F1C7; }
-      #footer-widget-5 .mobile-fixed-menu .menu-item:first-of-type {
-        border-right: 1px solid #F5F1C7; }
+      #footer-widget-5 .mobile-fixed-menu .menu-item:last-of-type {
+        border-right: 0; }
       #footer-widget-5 .mobile-fixed-menu .menu-item.schedule a:before {
         content: "\f489"; }
       #footer-widget-5 .mobile-fixed-menu .menu-item.sala a:before {

@@ -651,12 +651,16 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 32px;
-  font-size: 2rem;
+  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 100%;
   margin-top: 0;
   margin-bottom: 1em; }
   @media (min-width: 350px) {
+    h1 {
+      font-size: 32px;
+      font-size: 2rem; } }
+  @media (min-width: 480px) {
     h1 {
       font-size: 40px;
       font-size: 2.5rem; } }
@@ -1102,6 +1106,12 @@ object {
   font-size: .875rem;
   border-left: 0.25rem solid #F5F1C7;
   padding-left: .5rem; }
+
+.gform iframe {
+  display: block;
+  position: relative !important;
+  min-height: 500px !important;
+  max-height: 1040px !important; }
 
 .sticky {
   display: block; }
@@ -1799,7 +1809,10 @@ body.admin-bar {
     margin-bottom: 1rem; }
 
 #footer-widget-2 {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  /*_______ Fix for the anchor from the +info link on main nav _______*/
+  padding-top: 110px;
+  margin-top: -80px; }
   @media (min-width: 480px) {
     #footer-widget-2 .widget:nth-of-type(1), #footer-widget-2 .widget:nth-of-type(2), #footer-widget-2 .widget:nth-of-type(3) {
       flex: 0 1 45%; } }
@@ -2880,7 +2893,10 @@ h6 + .notation {
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    /*_______ Fix for the safe are on iPhoneX and similar _______*/
+    padding-bottom: env(safe-area-inset-bottom);
+    background-color: #F5F1C7; }
     #footer-widget-5 .mobile-fixed-menu .menu-item {
       margin: 0;
       width: 100%;
@@ -2896,7 +2912,6 @@ h6 + .notation {
         color: #F5F1C7;
         padding: .5rem 1rem;
         background-color: #C12B58;
-        border-left: 0.25rem solid #C12B58;
         box-shadow: 0 0 10px rgba(100, 100, 100, 0.3); }
         #footer-widget-5 .mobile-fixed-menu .menu-item a:before {
           display: block;
@@ -3284,14 +3299,8 @@ h6 + .notation {
   .page .entry-content h5 + h6,
   .page .entry-content h6 + h6 {
     margin-top: inherit; }
-  .single .entry-content h1[id]::before, .single .entry-content h2[id]::before, .single .entry-content h3[id]::before,
-  .single .entry-content h4[id]::before, .single .entry-content h5[id]::before, .single .entry-content h6[id]::before,
-  .page .entry-content h1[id]::before,
-  .page .entry-content h2[id]::before,
-  .page .entry-content h3[id]::before,
-  .page .entry-content h4[id]::before,
-  .page .entry-content h5[id]::before,
-  .page .entry-content h6[id]::before {
+  .single .entry-content [id]::before,
+  .page .entry-content [id]::before {
     content: '';
     display: block;
     height: 8rem;
@@ -4552,9 +4561,11 @@ div[class^="wcorg-sponsor-level-"] {
 #session-speaker-names {
   display: inline-block;
   list-style: none;
-  margin-left: 0 !important; }
+  margin-left: 0 !important;
+  padding-left: 0; }
   #session-speaker-names li {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
     #session-speaker-names li:before {
       display: none; }
     #session-speaker-names li a {

@@ -16,7 +16,7 @@
 		width: 100vw;
 		height: 100vh;
 		padding: 5vh 10vw 10vh;
-		background-color: $color__tertiary;
+		background-color: $color__primary;
 		margin:0;
 		overflow-y: auto;
 		z-index: 10;
@@ -49,9 +49,10 @@
 				font-weight: 700;
 				font-size: 1.5rem;
 				line-height: 100%;
-				color: $color__primary;
+				color: $color__minimus;
 				@extend %transition;
 				@media (min-width: 900px){
+					color: $color__primary;
 					font-size: 1rem;
 					padding: .5rem;
 				}
@@ -169,7 +170,7 @@
 		overflow: hidden;
 		height: auto;
 		padding: 0 0 0 .5rem;
-		border-left: .125rem solid $color__primary;
+		border-left: .125rem solid $color__minimus;
 		margin: 1rem 0 0;
 		z-index: 10;
 		@media (min-width: 900px){
@@ -204,9 +205,10 @@
 			}
 			a{
 				font-size: 1.25rem;
-				color: $color__primary;	
+				color: $color__minimus;
 				padding: .5rem .25rem;
 				@media (min-width: 900px){
+					color: $color__primary;
 					padding: 1rem;
 					font-size: 1rem;
 				}
@@ -302,8 +304,8 @@
 /*_______ Mobile navigation _______*/
 .menu-toggle{
 	position: absolute;
-	top: -1rem;
-    right: 1rem;
+	top: 1.25rem;
+    right: 4rem;
 	display: block;
 	width: 2.5rem;
 	height: 2rem;

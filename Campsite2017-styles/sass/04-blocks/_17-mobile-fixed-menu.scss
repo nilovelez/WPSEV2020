@@ -19,6 +19,9 @@
 		justify-content: space-between;
 		margin: 0;
 		padding: 0;
+		/*_______ Fix for the safe are on iPhoneX and similar _______*/
+		padding-bottom: env(safe-area-inset-bottom);
+		background-color: $color__tertiary;
 		.menu-item{
 			margin: 0;
 			width: 100%;
@@ -34,7 +37,6 @@
 				color: $color__tertiary;
 				padding: .5rem 1rem;
 				background-color: $color__secondary;
-				border-left: .25rem solid $color__secondary;
 				box-shadow: 0 0 10px rgba(100,100,100, .3);
 				&:before{
 					display: block;

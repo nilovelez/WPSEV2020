@@ -38,3 +38,12 @@ object {
     border-left: .25rem solid $color__tertiary;
     padding-left: .5rem;
 }
+
+.gform{
+	iframe {
+		display: block;
+		position: relative !important;
+		min-height: 500px !important;
+		max-height: 1040px !important;
+	}
+}

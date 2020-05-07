@@ -116,9 +116,11 @@
 		margin-bottom: 1rem;
 	}
 }
-
 #footer-widget-2{
 	margin-bottom: 2rem;
+	/*_______ Fix for the anchor from the +info link on main nav _______*/
+	padding-top: 110px;
+	margin-top: -80px;
 	.widget{
 		&:nth-of-type(1),
 		&:nth-of-type(2),

@@ -2730,7 +2730,8 @@ table {
   background-color: #F5F1C7;
   border: .25rem solid;
   margin-bottom: 2rem; }
-  .notation h1, .notation h2, .notation h3, .notation h4, .notation h5, .notation h6 {
+  .notation h1, .notation h2, .notation h3,
+  .notation h4, .notation h5, .notation h6 {
     margin-top: 0; }
   .notation p {
     font-size: 1.25rem;
@@ -3260,7 +3261,7 @@ h6 + .notation {
   .page .entry-content *:not([id^="more-"]) + h4,
   .page .entry-content *:not([id^="more-"]) + h5,
   .page .entry-content *:not([id^="more-"]) + h6 {
-    margin-top: 1em; }
+    margin-top: 1.5em; }
   .single .entry-content h1 + h1, .single .entry-content h2 + h1, .single .entry-content h3 + h1,
   .single .entry-content h4 + h1, .single .entry-content h5 + h1, .single .entry-content h6 + h1, .single .entry-content h1 + h2, .single .entry-content h2 + h2, .single .entry-content h3 + h2,
   .single .entry-content h4 + h2, .single .entry-content h5 + h2, .single .entry-content h6 + h2, .single .entry-content h1 + h3, .single .entry-content h2 + h3, .single .entry-content h3 + h3,
@@ -3319,6 +3320,9 @@ h6 + .notation {
   .single .entry-content span[id^="more-"],
   .page .entry-content span[id^="more-"] {
     display: none; }
+  .single .entry-content p a,
+  .page .entry-content p a {
+    color: #C12B58; }
   .single .entry-content a,
   .page .entry-content a {
     word-break: break-word; }

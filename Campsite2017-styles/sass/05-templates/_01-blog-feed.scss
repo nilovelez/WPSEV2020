@@ -1,15 +1,23 @@
 /*_______ Blog feed _______*/
 .blog,
-.tax-wcb_session_category{
+.archive,
+.search-results{
 	.site-main{
 		@extend %inner;
 		@extend %inner-padding;
 		display: flex;
 		flex-flow: row wrap;
 		margin-top: 8rem;
-		> header{
+		.page-header{
 			flex: 1 1 100%;
 			width: 100%;
+			padding: 4rem 2rem;
+			background-color: white;
+			margin-bottom: 4rem;
+			.page-title{
+				text-align: center;
+				margin: 0;
+			}
 		}
 	}
 }
@@ -128,14 +136,11 @@
 	}
 }
 
+/*_______ Sessions Category archive _______*/
 .archive{
 	&.tax-wcb_session_category{
 		.site-main{
 			margin-top: 0;
-		}
-		.page-header{
-			background-color: white;
-			padding: 4rem 2rem;
 		}
 		.hentry{
 			padding: 0;

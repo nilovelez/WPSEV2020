@@ -3033,6 +3033,11 @@ h6 + .notation {
     padding: 4rem 2rem;
     background-color: white;
     margin-bottom: 4rem; }
+    .blog .site-main .page-header .page-title,
+    .archive .site-main .page-header .page-title,
+    .search-results .site-main .page-header .page-title {
+      text-align: center;
+      margin: 0; }
 
 .archive .hentry,
 .search-results .hentry {

@@ -1,9 +1,10 @@
 @charset "utf-8";
+
 /*!
-Theme Name: WCES online 2020 (based on CampSite 2017 theme)
+Theme Name: WCSevilla 2020 (based on WCES online 2020 theme)
 Theme URI: http://underscores.me/
-Author: Bernhard Kau, Roberto Tuñón, Nuria Ramoneda, Juanka Díaz
-Author URI: https://kau-boys.com, https://robertotunon.com, https://jdevelopia.com/
+Author: Bernhard Kau, Roberto Tuñón, Nuria Ramoneda, Juanka Díaz, Rafa Poveda
+Author URI: https://kau-boys.com, https://robertotunon.com, https://jdevelopia.com/, https://bi0xid.es
 Description: New styles for the CampSite 2017 theme, a WordCamp Base Theme. For a quicker start, check out the <a href="https://2017.europe.wordcamp.org/2017/05/09/using-style-guides-for-modular-wordcamp-designs/">style guide</a>.
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -20,6 +21,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -92,16 +94,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
+
 @import "01-variables/01-mixins";
 @import "01-variables/02-colors";
 @import "01-variables/03-fonts";
 @import "01-variables/04-structure";
 @import "01-variables/05-columns";
 
-
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
+
 @import "02-base/00-normalize";
 @import "02-base/01-accessibility";
 @import "02-base/02-elements";
@@ -119,6 +122,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+
 @import "03-components/00-general-layout";
 @import "03-components/01-header";
 @import "03-components/02-navigation";
@@ -130,6 +134,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Blocks
 --------------------------------------------------------------*/
+
 @import "04-blocks/01-group";
 @import "04-blocks/02-image";
 @import "04-blocks/03-lists";
@@ -152,15 +157,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Templates
 --------------------------------------------------------------*/
+
+
 /*---------
 # Layouts
 ---------*/
+
 // @import "05-templates/layouts/01-content-sidebar";
 // @import "05-templates/layouts/02-sidebar-content";
 @import "05-templates/layouts/03-no-sidebar";
 @import "05-templates/layouts/04-full-width";
 @import "05-templates/layouts/05-nocontent";
-
 @import "05-templates/00-home";
 @import "05-templates/01-blog-feed";
 @import "05-templates/02-single";

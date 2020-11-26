@@ -1666,9 +1666,9 @@ body.admin-bar .site-header {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1rem;
-  background-color: #FFAA5F;
-  -webkit-box-shadow: 0 1px 0 #FFAA5F;
-          box-shadow: 0 1px 0 #FFAA5F;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 0 #fff;
+          box-shadow: 0 1px 0 #fff;
   margin: 0 auto;
   z-index: 10;
 }
@@ -1712,7 +1712,7 @@ body.admin-bar .site-header {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   padding: .5rem 0;
-  background-color: #FFAA5F;
+  background-color: #fff;
 }
 
 @media (min-width: 769px) {

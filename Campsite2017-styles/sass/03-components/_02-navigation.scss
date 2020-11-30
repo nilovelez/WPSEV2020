@@ -290,7 +290,7 @@
         }
     }
     &:visited {
-        color: $color__tertiary;
+        color: $color__verde1;
     }
     &:focus {
         outline: .125rem solid $color__tertiary;
@@ -298,6 +298,33 @@
     &:hover {
         background-color: $color__verde1;
         color: $color__naranja3;
+    }
+}
+
+#primary-menu {
+    .entradas {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: $color__naranja3;
+        padding: 13px;
+        background-color: $color__verde1;
+        a {
+            color: $color__naranja3 !important;
+            &:hover {
+                color: $color__verde1 !important;
+            }
+        }
+        &:visited {
+            color: $color__naranja3;
+        }
+        &:focus {
+            outline: .125rem solid $color__tertiary;
+        }
+        &:hover {
+            background-color: $color__naranja3;
+            color: $color__verde1;
+        }
     }
 }
 

@@ -1,8 +1,8 @@
 /*_______ Amigos footer widget _______*/
+
 .amigos-title {
     font-size: 1.25rem;
     color: $color__grey_light;
-
     &:before {
         content: '';
         display: block;
@@ -12,69 +12,72 @@
         margin: 0 auto .5rem;
     }
 }
-.amigos-list{
-	@extend %inner-med;
-	list-style: none;
-	padding: 0;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	margin: 0 auto 4rem;
-	.amigo{
-		@extend %transition;
-		a{
-			display: block;
-		}
-		&:hover{
-			opacity: .7;
-		}
-	}
-	&.patrocinadores{
-		.amigo{
-			flex: 0 1 100%;
-			margin: 0 auto 1rem;
-			@media(min-width: 480px){
-				flex: 0 1 48%;
-				margin: 0 1% 1rem;
-			}
-			@media(min-width: 769px){
-				flex: 0 1 33.333%;
-				margin: 0 0 1rem;
-			}
-		}
-	}
-	&.colaboradores{
-		.amigo{
-			flex: 0 1 80%;
-			margin: 0 auto 1rem;
-			@media(min-width: 480px){
-				flex: 0 1 35%;
-				margin: 0 5% 1rem;
-			}
-			@media(min-width: 769px){
-				flex: 0 1 25%;
-				margin: 0 0 1rem;
-			}
-		}
-	}
-	&.mediapartners{
-		margin-bottom: 0;
-		.amigo{
-			flex: 0 1 60%;
-			margin: 0 auto 1rem;
-			@media(min-width: 480px){
-				flex: 0 1 30%;
-				margin: 0 5% 1rem;
-			}
-			@media(min-width: 769px){
-				flex: 0 1 24%;
-				margin: 0 1% 1rem;
-			}
-		}
-	}
+
+.amigos-list {
+    @extend %inner-med;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 auto 4rem;
+    .amigo {
+        @extend %transition;
+        a {
+            display: block;
+        }
+        &:hover {
+            opacity: .7;
+        }
+    }
+    &.patrocinadores {
+        .amigo {
+            flex: 0 1 100%;
+            margin: 0 auto 1rem;
+            @media(min-width: 480px) {
+                flex: 0 1 48%;
+                margin: 0 1% 1rem;
+            }
+            @media(min-width: 769px) {
+                flex: 0 1 33.333%;
+                margin: 0 0 1rem;
+            }
+        }
+    }
+    &.colaboradores {
+        .amigo {
+            flex: 0 1 80%;
+            margin: 0 auto 1rem;
+            @media(min-width: 480px) {
+                flex: 0 1 35%;
+                margin: 0 5% 1rem;
+            }
+            @media(min-width: 769px) {
+                flex: 0 1 25%;
+                margin: 0 0 1rem;
+            }
+        }
+    }
+    &.mediapartners {
+        margin-bottom: 0;
+        .amigo {
+            flex: 0 1 60%;
+            margin: 0 auto 1rem;
+            @media(min-width: 480px) {
+                flex: 0 1 30%;
+                margin: 0 5% 1rem;
+            }
+            @media(min-width: 769px) {
+                flex: 0 1 24%;
+                margin: 0 1% 1rem;
+            }
+        }
+    }
 }
 
+
 /*_______ Amigos list _______*/
+
 .home-sponsors {
     background-color: $color__tertiary;
     padding: 4rem 2rem;
@@ -88,10 +91,13 @@
 .wceu-sponsors-title {
     font-size: 2.5rem;
     text-align: center;
-
     @media(min-width: 768px) {
         font-size: 3rem;
     }
+}
+
+.sponsor-level-title {
+    color: $color__verde1;
 }
 
 div[class^="wcorg-sponsor-level-"] {
@@ -100,9 +106,7 @@ div[class^="wcorg-sponsor-level-"] {
     justify-content: center;
     align-items: center;
     margin-bottom: 4rem;
-
     &:not(:last-of-type) {}
-
     h2,
     h3,
     h4,
@@ -112,7 +116,6 @@ div[class^="wcorg-sponsor-level-"] {
         font-size: 1.75rem;
         text-align: center;
         margin-bottom: 1.5rem;
-
         &:before {
             content: '.....';
             display: block;
@@ -127,7 +130,6 @@ div[class^="wcorg-sponsor-level-"] {
 .wcorg-sponsor {
     max-width: 80%;
     margin: .5rem auto;
-
     @media(min-width: 768px) {
         max-width: inherit;
         margin-top: 0;
@@ -135,11 +137,9 @@ div[class^="wcorg-sponsor-level-"] {
         margin-right: 1%;
         margin-bottom: 0;
     }
-
     a {
         display: block;
     }
-
     img {
         display: block;
         margin: 0 auto;
@@ -152,7 +152,6 @@ div[class^="wcorg-sponsor-level-"] {
         @media(min-width: 768px) {
             flex: 0 1 31.333%;
         }
-
         img {
             width: auto;
             max-height: 10rem;
@@ -165,7 +164,6 @@ div[class^="wcorg-sponsor-level-"] {
         @media(min-width: 768px) {
             flex: 0 1 23%;
         }
-
         img {
             width: auto;
             max-height: 8rem;
@@ -178,7 +176,6 @@ div[class^="wcorg-sponsor-level-"] {
         @media(min-width: 768px) {
             flex: 0 1 18%;
         }
-
         img {
             width: auto;
             max-height: 6rem;
@@ -191,9 +188,7 @@ div[class^="wcorg-sponsor-level-"] {
         @media(min-width: 768px) {
             flex: 0 1 14.666%;
         }
-
         margin: 0 1% 2rem;
-
         img {
             width: auto;
             max-height: 5rem;
@@ -209,7 +204,6 @@ div[class^="wcorg-sponsor-level-"] {
         @media(min-width: 768px) {
             flex: 0 1 31.333%;
         }
-
         img {
             width: auto;
             max-height: 10rem;

@@ -2080,9 +2080,9 @@ body.admin-bar .site-header {
   line-height: 100%;
   text-align: center;
   text-decoration: none;
-  color: #FFAA5F;
+  color: #359b6f;
   padding: 0;
-  background-color: #414141;
+  background-color: #fccb95;
 }
 
 @media (min-width: 900px) {
@@ -2121,7 +2121,7 @@ body.admin-bar .site-header {
 }
 
 .more-info:visited {
-  color: #FFAA5F;
+  color: #359b6f;
 }
 
 .more-info:focus {
@@ -2129,7 +2129,38 @@ body.admin-bar .site-header {
 }
 
 .more-info:hover {
-  background-color: #1A65AB;
+  background-color: #359b6f;
+  color: #fccb95;
+}
+
+#primary-menu .entradas {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #fccb95;
+  padding: 13px;
+  background-color: #359b6f;
+}
+
+#primary-menu .entradas a {
+  color: #fccb95 !important;
+}
+
+#primary-menu .entradas a:hover {
+  color: #359b6f !important;
+}
+
+#primary-menu .entradas:visited {
+  color: #fccb95;
+}
+
+#primary-menu .entradas:focus {
+  outline: 0.125rem solid #FFAA5F;
+}
+
+#primary-menu .entradas:hover {
+  background-color: #fccb95;
+  color: #359b6f;
 }
 
 /*_______ Mobile navigation _______*/
@@ -2451,8 +2482,8 @@ body.admin-bar .site-header {
 .footer-widgets-block:not(:first-child) input[type="submit"]:hover {
   outline: none;
   color: #ce7c38;
-  background-color: #1A65AB;
-  border-color: #1A65AB;
+  background-color: #4ed8a0;
+  border-color: #4ed8a0;
 }
 
 .footer-widgets-block:not(:first-child) button:active,
@@ -2496,7 +2527,7 @@ body.admin-bar .site-header {
 }
 
 .footer-widgets-block:not(:first-child) .widget_nav_menu .menu .menu-item a:hover {
-  color: #1A65AB;
+  color: #4ed8a0;
 }
 
 .footer-widgets-block:not(:first-child) .widget_nav_menu .menu .menu-item .sub-menu {
@@ -2519,7 +2550,7 @@ body.admin-bar .site-header {
 }
 
 #footer-widget-1 .widget .widget-title {
-  color: #ce7c38;
+  color: #359b6f;
   margin-bottom: 2rem;
 }
 
@@ -3993,6 +4024,7 @@ h6 + .notation {
           flex-flow: column nowrap;
   margin-top: 0;
   margin-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 @media (min-width: 768px) {
@@ -5018,6 +5050,16 @@ h6 + .notation {
   }
 }
 
+#post-13 .entry-content {
+  background-image: url(https://sevilla.wordcamp.org/2020/files/2020/11/frontal-1500x1500-amplio.png);
+  background-size: cover;
+  background-position: center;
+}
+
+body.admin-bar #tix {
+  background: transparent;
+}
+
 /*_______ Page template _______*/
 .page-template-default .entry-header,
 .page-template .entry-header,
@@ -5447,10 +5489,10 @@ h6 + .notation {
 
 @media (min-width: 650px) {
   .tix-js:not(.tix-has-dynamic-receipts) .tix_tickets_table tr[class^="tix-ticket-"] {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
-    max-width: 50%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 73%;
+            flex: 1 1 73%;
+    max-width: 80%;
     margin: 0 2% 2rem;
   }
 }
@@ -5494,7 +5536,8 @@ h6 + .notation {
   margin: auto auto .5rem;
 }
 
-.tix-js:not(.tix-has-dynamic-receipts) .tix-column-quantity, .tix-js:not(.tix-has-dynamic-receipts) .tix-column-remaining {
+.tix-js:not(.tix-has-dynamic-receipts) .tix-column-quantity,
+.tix-js:not(.tix-has-dynamic-receipts) .tix-column-remaining {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
@@ -5633,7 +5676,11 @@ h6 + .notation {
     /* Force table to not be like tables anymore */
     /* Hide table headers (but not display: none;, for accessibility) */
   }
-  .tix-order-summary thead, .tix-order-summary tbody, .tix-order-summary th, .tix-order-summary td, .tix-order-summary tr,
+  .tix-order-summary thead,
+  .tix-order-summary tbody,
+  .tix-order-summary th,
+  .tix-order-summary td,
+  .tix-order-summary tr,
   .tix-ticket-form thead,
   .tix-ticket-form tbody,
   .tix-ticket-form th,
@@ -5700,7 +5747,8 @@ h6 + .notation {
 }
 
 /*_______ Registry information _______*/
-.tix-attendee-form tr, .tix_invoice_table tr {
+.tix-attendee-form tr,
+.tix_invoice_table tr {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5713,7 +5761,8 @@ h6 + .notation {
 }
 
 @media (min-width: 480px) {
-  .tix-attendee-form tr, .tix_invoice_table tr {
+  .tix-attendee-form tr,
+  .tix_invoice_table tr {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row nowrap;
@@ -5721,7 +5770,8 @@ h6 + .notation {
   }
 }
 
-.tix-attendee-form td.tix-left, .tix_invoice_table td.tix-left {
+.tix-attendee-form td.tix-left,
+.tix_invoice_table td.tix-left {
   width: 100%;
   text-align: left;
   line-height: 120%;
@@ -5729,88 +5779,108 @@ h6 + .notation {
 }
 
 @media (min-width: 480px) {
-  .tix-attendee-form td.tix-left, .tix_invoice_table td.tix-left {
+  .tix-attendee-form td.tix-left,
+  .tix_invoice_table td.tix-left {
     width: 40%;
     text-align: right;
   }
 }
 
-.tix-attendee-form td.tix-left label, .tix_invoice_table td.tix-left label {
+.tix-attendee-form td.tix-left label,
+.tix_invoice_table td.tix-left label {
   font-weight: 400;
   font-size: 1.25rem;
 }
 
 @media (min-width: 480px) {
-  .tix-attendee-form td.tix-left label, .tix_invoice_table td.tix-left label {
+  .tix-attendee-form td.tix-left label,
+  .tix_invoice_table td.tix-left label {
     text-align: right;
   }
 }
 
-.tix-attendee-form td.tix-right, .tix_invoice_table td.tix-right {
+.tix-attendee-form td.tix-right,
+.tix_invoice_table td.tix-right {
   width: 100%;
 }
 
 @media (min-width: 480px) {
-  .tix-attendee-form td.tix-right, .tix_invoice_table td.tix-right {
+  .tix-attendee-form td.tix-right,
+  .tix_invoice_table td.tix-right {
     width: 58%;
     margin-left: 2rem;
   }
 }
 
-.tix-attendee-form td.tix-right br, .tix_invoice_table td.tix-right br {
+.tix-attendee-form td.tix-right br,
+.tix_invoice_table td.tix-right br {
   display: none;
 }
 
-.tix-attendee-form td.tix-right label, .tix_invoice_table td.tix-right label {
+.tix-attendee-form td.tix-right label,
+.tix_invoice_table td.tix-right label {
   margin-left: 10%;
   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 480px) {
-  .tix-attendee-form td.tix-right label, .tix_invoice_table td.tix-right label {
+  .tix-attendee-form td.tix-right label,
+  .tix_invoice_table td.tix-right label {
     margin-left: 0;
   }
 }
 
-.tix-attendee-form td.tix-right label:first-child, .tix_invoice_table td.tix-right label:first-child {
+.tix-attendee-form td.tix-right label:first-child,
+.tix_invoice_table td.tix-right label:first-child {
   margin-top: 1rem;
 }
 
 @media (min-width: 480px) {
-  .tix-attendee-form td.tix-right label:first-child, .tix_invoice_table td.tix-right label:first-child {
+  .tix-attendee-form td.tix-right label:first-child,
+  .tix_invoice_table td.tix-right label:first-child {
     margin-top: 0;
   }
 }
 
 .tix-attendee-form td.tix-right input[type="radio"],
-.tix-attendee-form td.tix-right input[type="checkbox"], .tix_invoice_table td.tix-right input[type="radio"],
+.tix-attendee-form td.tix-right input[type="checkbox"],
+.tix_invoice_table td.tix-right input[type="radio"],
 .tix_invoice_table td.tix-right input[type="checkbox"] {
   float: left;
   margin-right: .5rem;
   margin-bottom: 1rem;
 }
 
-.tix-attendee-form td.tix-right input, .tix-attendee-form td.tix-right textarea, .tix-attendee-form td.tix-right select, .tix_invoice_table td.tix-right input, .tix_invoice_table td.tix-right textarea, .tix_invoice_table td.tix-right select {
+.tix-attendee-form td.tix-right input,
+.tix-attendee-form td.tix-right textarea,
+.tix-attendee-form td.tix-right select,
+.tix_invoice_table td.tix-right input,
+.tix_invoice_table td.tix-right textarea,
+.tix_invoice_table td.tix-right select {
   width: 100% !important;
 }
 
-.tix-attendee-form td.tix-right textarea, .tix_invoice_table td.tix-right textarea {
+.tix-attendee-form td.tix-right textarea,
+.tix_invoice_table td.tix-right textarea {
   min-height: 6rem;
 }
 
-.tix-attendee-form .tix-required-star, .tix_invoice_table .tix-required-star {
+.tix-attendee-form .tix-required-star,
+.tix_invoice_table .tix-required-star {
   color: #1A65AB;
   font-weight: 700;
 }
 
-.tix-attendee-form .tix-row-question-3968 .tix-left:after, .tix_invoice_table .tix-row-question-3968 .tix-left:after {
+.tix-attendee-form .tix-row-question-3968 .tix-left:after,
+.tix_invoice_table .tix-row-question-3968 .tix-left:after {
   content: "(include @)";
   display: block;
   font-size: 70%;
   color: #414141;
 }
 
-.tix-attendee-form .tix-row-question-3969 .tix-left:after, .tix_invoice_table .tix-row-question-3969 .tix-left:after {
+.tix-attendee-form .tix-row-question-3969 .tix-left:after,
+.tix_invoice_table .tix-row-question-3969 .tix-left:after {
   content: "(https required)";
   display: block;
   font-size: 70%;
@@ -5940,6 +6010,18 @@ h6 + .notation {
 #tix .tix-submit .tix-checkout-button:focus, #tix .tix-submit .tix-checkout-button:hover {
   color: #1A65AB;
   background-color: white;
+}
+
+.entrada-bloque-1 {
+  margin-bottom: 20px;
+}
+
+.entrada-bloque-2 {
+  margin-bottom: 20px;
+}
+
+.entrada-bloque-3 {
+  margin-bottom: 20px;
 }
 
 /*_______ Amigos footer widget _______*/
@@ -6075,6 +6157,10 @@ h6 + .notation {
   .wceu-sponsors-title {
     font-size: 3rem;
   }
+}
+
+.sponsor-level-title {
+  color: #359b6f;
 }
 
 div[class^="wcorg-sponsor-level-"] {
